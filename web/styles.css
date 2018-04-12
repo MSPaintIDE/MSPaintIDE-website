@@ -24,14 +24,41 @@ material-expansionpanel header {
     min-height: 57px !important;
 }
 
-.card, .card > .panel {
+.info-card, .info-card > .panel {
     width: 250px !important;
     height: 250px;
 }
 
-.card:hover .panel {
+.info-card:hover .panel {
     box-shadow: 2px 4px 4px 1px rgba(0, 0, 0, 0.14),
                 2px 5px 3px -1px rgba(0, 0, 0, 0.12),
                 2px 3px 7px 1px rgba(0, 0, 0, 0.2) !important;
     transition: box-shadow 250ms;
+}
+
+.review-card:hover .panel {
+    box-shadow: 1px 3px 3px 0px rgba(0, 0, 0, 0.14),
+                1px 4px 2px -2px rgba(0, 0, 0, 0.12),
+                1px 2px 6px 0px rgba(0, 0, 0, 0.2) !important;
+}
+
+.review-disappearing {
+    opacity: 0;
+}
+
+.review-card > .panel {
+    margin: 8px 0 !important;
+}
+
+.review-card:nth-of-type(2) {
+    width: 50vw !important;
+    margin: 0 !important;
+}
+
+.review-card:not(:nth-of-type(2)) {
+    margin: 15px 0 15px 2.5vw !important
+}
+
+.review-suppressed {
+    height: 0 !important;
 }

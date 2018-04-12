@@ -90,30 +90,30 @@
 
     <div class="flex-container">
         <material-expansionpanel disabled [expanded]="true" [hideExpandedHeader]="true" [showSaveCancel]="false"
-                                 class="card">
+                                 class="info-card">
             <h2>Highlighting</h2>
             <p>MS Paint IDE comes with the most advanced code highlighting in any production IDE present to this
                 day.</p>
         </material-expansionpanel>
         <material-expansionpanel disabled [expanded]="true" [hideExpandedHeader]="true" [showSaveCancel]="false"
-                                 class="card">
+                                 class="info-card">
             <h2>Parsing</h2>
             <p>Top of the line parsing is just standard with MS Paint IDE, providing with sometimes a 99% accuracy
                 reading and parsing your programs.</p>
         </material-expansionpanel>
         <material-expansionpanel disabled [expanded]="true" [hideExpandedHeader]="true" [showSaveCancel]="false"
-                                 class="card">
+                                 class="info-card">
             <h2>Multiple Classes</h2>
             <p>Multiple class support, so you can make as advanced programs as you want.</p>
         </material-expansionpanel>
         <material-expansionpanel disabled [expanded]="true" [hideExpandedHeader]="true" [showSaveCancel]="false"
-                                 class="card">
+                                 class="info-card">
             <h2>Options</h2>
             <p>Separate syntax highlighting, compilation, and execution, with the option to do multiple at a time for
                 maximum preformance.</p>
         </material-expansionpanel>
         <material-expansionpanel disabled [expanded]="true" [hideExpandedHeader]="true" [showSaveCancel]="false"
-                                 class="card">
+                                 class="info-card">
             <h2>Fastest Growing</h2>
             <p>The fastest growing IDE by our polls, with the most features of any modern day IDE. Since this features
                 section isn't legally binding, we can say that.</p>
@@ -124,40 +124,56 @@
     <h1 class="section-title">Advantages</h1>
 
     <div class="flex-container">
-        <div class="flex-container">
-            <material-expansionpanel disabled [expanded]="true" [hideExpandedHeader]="true" [showSaveCancel]="false"
-                                     class="card">
-                <h2>Partially Native</h2>
-                <p>The main IDE comes with your Windows computer, so you don't need to worry about potential viruses
-                    with your brand new computer.</p>
-            </material-expansionpanel>
-            <material-expansionpanel disabled [expanded]="true" [hideExpandedHeader]="true" [showSaveCancel]="false"
-                                     class="card">
-                <h2>Popular</h2>
-                <p>Chances are, you probably know about MS Paint, or at least have heard of it. This makes adapting to
-                    it easier than most programs.</p>
-            </material-expansionpanel>
-            <material-expansionpanel disabled [expanded]="true" [hideExpandedHeader]="true" [showSaveCancel]="false"
-                                     class="card">
-                <h2>Oldest</h2>
-                <p>MS Paint IDE's core program, MS Paint, is older than almost every modern IDE, also making it easily
-                    recognisable and bug-resistant.</p>
-            </material-expansionpanel>
-            <material-expansionpanel disabled [expanded]="true" [hideExpandedHeader]="true" [showSaveCancel]="false"
-                                     class="card">
-                <h2>Lightweight</h2>
-                <p>MS Paint IDE is extremely lightweight, and is optimised for Windows systems.</p>
-            </material-expansionpanel>
-            <material-expansionpanel disabled [expanded]="true" [hideExpandedHeader]="true" [showSaveCancel]="false"
-                                     class="card">
-                <h2>Share Code Easily</h2>
-                <p>Code sharing is easy, as your code is just an image.</p>
-            </material-expansionpanel>
-            <material-expansionpanel disabled [expanded]="true" [hideExpandedHeader]="true" [showSaveCancel]="false"
-                                     class="card">
-                <h2>Superiority</h2>
-                <p>It's not Eclipse.</p>
-            </material-expansionpanel>
+        <material-expansionpanel disabled [expanded]="true" [hideExpandedHeader]="true" [showSaveCancel]="false"
+                                 class="info-card">
+            <h2>Partially Native</h2>
+            <p>The main IDE comes with your Windows computer, so you don't need to worry about potential viruses
+                with your brand new computer.</p>
+        </material-expansionpanel>
+        <material-expansionpanel disabled [expanded]="true" [hideExpandedHeader]="true" [showSaveCancel]="false"
+                                 class="info-card">
+            <h2>Popular</h2>
+            <p>Chances are, you probably know about MS Paint, or at least have heard of it. This makes adapting to
+                it easier than most programs.</p>
+        </material-expansionpanel>
+        <material-expansionpanel disabled [expanded]="true" [hideExpandedHeader]="true" [showSaveCancel]="false"
+                                 class="info-card">
+            <h2>Oldest</h2>
+            <p>MS Paint IDE's core program, MS Paint, is older than almost every modern IDE, also making it easily
+                recognisable and bug-resistant.</p>
+        </material-expansionpanel>
+        <material-expansionpanel disabled [expanded]="true" [hideExpandedHeader]="true" [showSaveCancel]="false"
+                                 class="info-card">
+            <h2>Lightweight</h2>
+            <p>MS Paint IDE is extremely lightweight, and is optimised for Windows systems.</p>
+        </material-expansionpanel>
+        <material-expansionpanel disabled [expanded]="true" [hideExpandedHeader]="true" [showSaveCancel]="false"
+                                 class="info-card">
+            <h2>Share Code Easily</h2>
+            <p>Code sharing is easy, as your code is just an image.</p>
+        </material-expansionpanel>
+        <material-expansionpanel disabled [expanded]="true" [hideExpandedHeader]="true" [showSaveCancel]="false"
+                                 class="info-card">
+            <h2>Superiority</h2>
+            <p>It's not Eclipse.</p>
+        </material-expansionpanel>
+    </div>
+
+
+    <h1 class="section-title">Reviews</h1>
+
+    <div class="flex-container">
+        <div class="review-container">
+            <template ngFor let-review [ngForOf]="reviews">
+                <material-expansionpanel review disabled [expanded]="true" [hideExpandedHeader]="true"
+                                         [showSaveCancel]="false"
+                                         class="review-card" *ngIf="review.rendered"
+                                         [class.review-disappearing]="review.disappearing"
+                                         [class.review-suppressed]="review.suppressed">
+                    <p>{{review.message}}</p>
+                    <p>- {{review.author}}</p>
+                </material-expansionpanel>
+            </template>
         </div>
     </div>
 </div>

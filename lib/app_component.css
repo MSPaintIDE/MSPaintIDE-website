@@ -74,12 +74,35 @@ material-expansionpanel {
     padding: 0 !important;
 }
 
-.card {
+.info-card {
     text-align: center;
 }
 
 .flex-container > material-expansionpanel {
     margin: 25px;
+}
+
+.review-container {
+    width: 50vw;
+    height: 600px;
+    /*min-height: 536px;*/
+    margin-bottom: 25vh;
+}
+
+.review-card {
+    transition: all 500ms, transform 250ms;
+}
+
+.review-card, .info-card > .panel {
+    width: 45vw;
+}
+
+.review-card > p:first-child {
+    font-size: 24px;
+}
+
+.review-card:hover {
+    transform: scale(1.05);
 }
 
 @media (max-width: 600px) {
