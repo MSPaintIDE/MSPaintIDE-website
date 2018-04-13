@@ -170,7 +170,7 @@
                                          class="review-card" *ngIf="review.rendered"
                                          [class.review-margin]="movingUp"
                                          [class.review-disappearing]="review.disappearing">
-                    <p>{{review.message}}</p>
+                    <p class="review-message">{{review.message}}</p>
                     <p>- {{review.author}}</p>
                 </material-expansionpanel>
             </template>

@@ -21,7 +21,7 @@ import 'review.dart';
 )
 class AppComponent implements OnInit {
   var randomMessage;
-  List<Review> reviews;
+  List<Review> reviews = new List<Review>();
   List<Review> activeReviews = new List<Review>();
   var index = 1;
   bool movingUp = false;
@@ -39,8 +39,26 @@ class AppComponent implements OnInit {
     }
   }
 
+  Future getReviews() async {
+    var path = 'https://ms-paint-i.de/quotes.json';
+    try {
+      return await HttpRequest.getString(path);
+    } catch (e) {
+      print('Couldn\'t open $path');
+    }
+  }
+
   void processMessages(messages) {
     randomMessage = (JSON.decode(messages)..shuffle()).first;
+  }
+
+  void processReviews(reviews) {
+    var json = JSON.decode(reviews);
+    for (var quote in json) {
+      this.reviews.add(new Review(quote['quote'], quote['author'], quote['url']));
+    }
+
+    startReviewCycle();
   }
 
   void updateActiveReviews() {
@@ -58,8 +76,6 @@ class AppComponent implements OnInit {
 
     activeReviews.add(first);
 
-    print(activeReviews);
-
     index++;
   }
 
@@ -70,8 +86,6 @@ class AppComponent implements OnInit {
 
   int getNext([var adding = 1]) {
     int temp = index + adding;
-    print("Result for $temp is ${temp -
-        ((temp ~/ reviews.length) * reviews.length)}");
     temp = temp - ((temp ~/ reviews.length) * reviews.length);
     return temp;
   }
@@ -80,20 +94,10 @@ class AppComponent implements OnInit {
   ngOnInit() {
     print("Getting messages...");
     getMessages().then(processMessages);
+    getReviews().then(processReviews);
+  }
 
-    reviews = [
-      new Review("Message 1", "Author 1", "https://ms-paint-i.de/"),
-      new Review("Message 2", "Author 2", "https://ms-paint-i.de/"),
-      new Review("Message 3", "Author 3", "https://ms-paint-i.de/"),
-      new Review("Message 4", "Author 4", "https://ms-paint-i.de/"),
-      new Review("Message 5", "Author 5", "https://ms-paint-i.de/"),
-      new Review("Message 6", "Author 6", "https://ms-paint-i.de/"),
-      new Review("Message 7", "Author 7", "https://ms-paint-i.de/"),
-      new Review("Message 8", "Author 8", "https://ms-paint-i.de/"),
-      new Review("Message 9", "Author 9", "https://ms-paint-i.de/"),
-      new Review("Message 10", "Author 10", "https://ms-paint-i.de/")
-    ];
-
+  void startReviewCycle() {
     activeReviews.add(reviews[reviews.length - 1]..rendered = true);
     activeReviews.add(reviews[0]..rendered = true);
     activeReviews.add(reviews[1]..rendered = true);
