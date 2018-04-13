@@ -98,15 +98,12 @@ class AppComponent implements OnInit {
 
     reviews = reviews.reversed.toList();
 
-//    var first = reviews[getNext(4)];
-    var second = reviews[getNext(3)];
-    var third = reviews[getNext(2)];
-    var fourth = reviews[getNext()];
-
 //    activeReviews.add(first);
-    activeReviews.add(second);
-    activeReviews.add(third);
-    activeReviews.add(fourth);
+    activeReviews.add(reviews[0]..rendered = true);
+    activeReviews.add(reviews[reviews.length - 1]..rendered = true);
+    activeReviews.add(reviews[reviews.length - 2]..rendered = true);
+
+    for (var i = 0; i < 10; i++) print(activeReviews);
 
     void updateStuff() {
       new Future.delayed(const Duration(seconds: 2), () {
