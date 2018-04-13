@@ -8,7 +8,6 @@ class Review {
   String url;
   bool rendered = false;
   bool disappearing = false;
-  bool suppressed = false;
 
   Review(this.message, this.author, this.url);
 
@@ -19,10 +18,8 @@ class Review {
   void startDisappearing(AppComponent app_component) {
     app_component.movingUp = true;
     disappearing = true;
-    suppressed = true;
-    var future = new Future.delayed(const Duration(milliseconds: 500), () {
+    new Future.delayed(const Duration(milliseconds: 500), () {
       rendered = false;
-      suppressed = false;
       disappearing = false;
       app_component.removeLast();
     });

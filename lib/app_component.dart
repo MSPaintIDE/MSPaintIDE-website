@@ -23,7 +23,7 @@ class AppComponent implements OnInit {
   var randomMessage;
   List<Review> reviews;
   List<Review> activeReviews = new List<Review>();
-  var index = -1;
+  var index = 1;
   bool movingUp = false;
 
   void routeTo(url) {
@@ -44,14 +44,12 @@ class AppComponent implements OnInit {
   }
 
   void updateActiveReviews() {
-    var first = reviews[getNext(4)];
-    var second = reviews[getNext(3)];
-    var third = reviews[getNext(2)];
-    var fourth = reviews[getNext()];
+    var first = reviews[getNext()];
+    var second = activeReviews[2];
+    var third = activeReviews[1];
+    var fourth = activeReviews[0];
 
     first.rendered = true;
-//    first.suppressed = true;
-
     second.rendered = true;
     third.rendered = true;
     fourth.rendered = true;
@@ -96,35 +94,26 @@ class AppComponent implements OnInit {
       new Review("Message 10", "Author 10", "https://ms-paint-i.de/")
     ];
 
-    reviews = reviews.reversed.toList();
-
-//    activeReviews.add(first);
-    activeReviews.add(reviews[0]..rendered = true);
     activeReviews.add(reviews[reviews.length - 1]..rendered = true);
-    activeReviews.add(reviews[reviews.length - 2]..rendered = true);
-
-    for (var i = 0; i < 10; i++) print(activeReviews);
-
-    void updateStuff() {
-      new Future.delayed(const Duration(seconds: 2), () {
-        void noDelay() {
-          if (document.querySelector(".review-card:hover") ==
-              null) {
-            updateActiveReviews();
-            updateStuff();
-          } else {
-            new Future.delayed(const Duration(milliseconds: 250), noDelay);
-          }
-        }
-
-        noDelay();
-      });
-    }
+    activeReviews.add(reviews[0]..rendered = true);
+    activeReviews.add(reviews[1]..rendered = true);
 
     updateStuff();
+  }
 
-    for (var review in reviews) {
-      print(review);
-    }
+  void updateStuff() {
+    new Future.delayed(const Duration(seconds: 2), () {
+      void noDelay() {
+        if (document.querySelector(".review-card:hover") ==
+            null) {
+          updateActiveReviews();
+          updateStuff();
+        } else {
+          new Future.delayed(const Duration(milliseconds: 250), noDelay);
+        }
+      }
+
+      noDelay();
+    });
   }
 }
