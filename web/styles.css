@@ -46,8 +46,16 @@ material-expansionpanel header {
     opacity: 0;
 }
 
+/*.review-appearing {*/
+    /*opacity: 0;*/
+/*}*/
+
 .review-card > .panel {
     margin: 8px 0 !important;
+}
+
+.review-card > .panel > main {
+    transition: max-height 500ms;
 }
 
 .review-card:nth-of-type(2) {
@@ -60,5 +68,5 @@ material-expansionpanel header {
 }
 
 .review-suppressed {
-    height: 0 !important;
+    /*height: 0 !important;*/
 }

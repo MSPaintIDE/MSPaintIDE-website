@@ -164,10 +164,11 @@
 
     <div class="flex-container">
         <div class="review-container">
-            <template ngFor let-review [ngForOf]="reviews">
+            <template ngFor let-review [ngForOf]="activeReviews">
                 <material-expansionpanel review disabled [expanded]="true" [hideExpandedHeader]="true"
                                          [showSaveCancel]="false"
                                          class="review-card" *ngIf="review.rendered"
+                                         [class.review-margin]="movingUp"
                                          [class.review-disappearing]="review.disappearing"
                                          [class.review-suppressed]="review.suppressed">
                     <p>{{review.message}}</p>

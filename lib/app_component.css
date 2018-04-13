@@ -6,8 +6,8 @@
 }
 
 .custom-width {
-@include mat-drawer-width(50%);
-@include mat-temporary-drawer-width(50%);
+@include mat-drawer-width(50 %);
+@include mat-temporary-drawer-width(50 %);
 }
 
 .section-title {
@@ -84,13 +84,30 @@ material-expansionpanel {
 
 .review-container {
     width: 50vw;
-    height: 600px;
-    /*min-height: 536px;*/
+    height: 415px !important;
+    max-height: 415px !important;
     margin-bottom: 25vh;
+    overflow-y: hidden;
+    overflow-x: visible !important;
 }
 
 .review-card {
-    transition: all 500ms, transform 250ms;
+    animation: fadein 500ms;
+    transition: all 500ms, transform 250ms, height 500ms;
+}
+
+.review-margin:nth-of-type(1) {
+    margin-top: -135px !important;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 .review-card, .info-card > .panel {

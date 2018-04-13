@@ -4,7 +4,6 @@ import 'dart:convert';
 import 'dart:html';
 import 'package:angular_components/angular_components.dart';
 
-import 'review_directive.dart';
 import 'review.dart';
 
 // AngularDart info: https://webdev.dartlang.org/angular
@@ -21,7 +20,9 @@ class AppComponent implements OnInit {
 
   var randomMessage;
   List<Review> reviews;
+  List<Review> activeReviews = new List<Review>();
   var index = -1;
+  bool movingUp = false;
 
   void routeTo(url) {
     window.location.assign(url);
@@ -53,22 +54,25 @@ class AppComponent implements OnInit {
     third.rendered = true;
     fourth.rendered = true;
 
-    print("=======================");
-    for (var review in reviews) {
-      print(review);
-    }
-
 //    var future = new Future.delayed(const Duration(seconds: 1), () {
-      fourth.startDisappearing();
+    fourth.startDisappearing(this);
 //    });
+
+    activeReviews.add(first);
+
+    print(activeReviews);
 
     index++;
   }
 
+  void removeLast() {
+//    activeReviews.removeLast();
+    activeReviews.removeAt(0);
+    movingUp = false;
+  }
+
   int getNext([var adding = 1]) {
     int temp = index + adding;
-//    print("temp = $temp");
-//    print("Can fit in ${temp ~/ reviews.length} times");
     print("Result for $temp is ${temp - ((temp ~/ reviews.length) * reviews.length)}");
     temp = temp - ((temp ~/ reviews.length) * reviews.length);
     return temp;
@@ -93,6 +97,16 @@ class AppComponent implements OnInit {
     ];
 
     reviews = reviews.reversed.toList();
+
+//    var first = reviews[getNext(4)];
+    var second = reviews[getNext(3)];
+    var third = reviews[getNext(2)];
+    var fourth = reviews[getNext()];
+
+//    activeReviews.add(first);
+    activeReviews.add(second);
+    activeReviews.add(third);
+    activeReviews.add(fourth);
 
     void updateStuff() {
       new Future.delayed(const Duration(seconds: 2), () {
