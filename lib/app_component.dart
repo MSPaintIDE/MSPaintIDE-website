@@ -11,13 +11,15 @@ import 'review.dart';
 
 @Component(
   selector: 'my-app',
-  styleUrls: const ['app_component.css', 'package:angular_components/app_layout/layout.scss.css'],
+  styleUrls: const [
+    'app_component.css',
+    'package:angular_components/app_layout/layout.scss.css'
+  ],
   templateUrl: 'app_component.html',
   directives: const [CORE_DIRECTIVES, materialDirectives],
   providers: const [materialProviders],
 )
 class AppComponent implements OnInit {
-
   var randomMessage;
   List<Review> reviews;
   List<Review> activeReviews = new List<Review>();
@@ -54,9 +56,7 @@ class AppComponent implements OnInit {
     third.rendered = true;
     fourth.rendered = true;
 
-//    var future = new Future.delayed(const Duration(seconds: 1), () {
     fourth.startDisappearing(this);
-//    });
 
     activeReviews.add(first);
 
@@ -66,14 +66,14 @@ class AppComponent implements OnInit {
   }
 
   void removeLast() {
-//    activeReviews.removeLast();
     activeReviews.removeAt(0);
     movingUp = false;
   }
 
   int getNext([var adding = 1]) {
     int temp = index + adding;
-    print("Result for $temp is ${temp - ((temp ~/ reviews.length) * reviews.length)}");
+    print("Result for $temp is ${temp -
+        ((temp ~/ reviews.length) * reviews.length)}");
     temp = temp - ((temp ~/ reviews.length) * reviews.length);
     return temp;
   }
@@ -110,8 +110,17 @@ class AppComponent implements OnInit {
 
     void updateStuff() {
       new Future.delayed(const Duration(seconds: 2), () {
-        updateActiveReviews();
-        updateStuff();
+        void noDelay() {
+          if (document.querySelector(".review-card:hover") ==
+              null) {
+            updateActiveReviews();
+            updateStuff();
+          } else {
+            new Future.delayed(const Duration(milliseconds: 250), noDelay);
+          }
+        }
+
+        noDelay();
       });
     }
 

@@ -83,12 +83,12 @@ material-expansionpanel {
 }
 
 .review-container {
-    width: 50vw;
+    width: 60vw;
     height: 415px !important;
     max-height: 415px !important;
     margin-bottom: 25vh;
+    overflow-x: visible;
     overflow-y: hidden;
-    overflow-x: visible !important;
 }
 
 .review-card {
