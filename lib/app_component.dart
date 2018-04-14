@@ -79,14 +79,6 @@ class AppComponent implements OnInit {
     new Future.delayed(const Duration(milliseconds: 10), () {
       document.activeElement.blur();
     });
-
-//    InputElement clickedElement = event.target;
-//
-//    for (Element element in document.querySelectorAll(".review-card").toList()) {
-//      if (element.contains(clickedElement)) {
-//        print(element.querySelector("p").getAttribute("review-id"));
-//      }
-//    }
   }
 
   void hideReviewInfoDialog() {

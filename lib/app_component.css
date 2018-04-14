@@ -109,6 +109,7 @@ material-expansionpanel {
 
 .basic-dialog material-button {
     color: #3F51B5;
+    min-width: 58.953px;
 }
 
 .review-info-message {
