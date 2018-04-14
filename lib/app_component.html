@@ -166,6 +166,7 @@
         <div class="review-container">
             <template ngFor let-review [ngForOf]="activeReviews">
                 <material-expansionpanel review disabled [expanded]="true" [hideExpandedHeader]="true"
+                                         (click)="showReviewInfoDialog(review)"
                                          [showSaveCancel]="false"
                                          class="review-card" *ngIf="review.rendered"
                                          [class.review-margin]="movingUp"
@@ -176,4 +177,17 @@
             </template>
         </div>
     </div>
+
+    <modal [visible]="showReviewInfo">
+        <material-dialog class="basic-dialog" [autoDismissable]="true" (dismiss)="hideReviewInfoDialog()">
+            <p class="review-info-message">{{reviewInfoText}}</p>
+
+            <div footer>
+                <i class="review-info-author">- <a href="{{reviewInfoUrl}}">{{reviewInfoAuthor}}</a></i>
+                <material-button autoFocus clear-size (trigger)="hideReviewInfoDialog()">
+                    Close
+                </material-button>
+            </div>
+        </material-dialog>
+    </modal>
 </div>

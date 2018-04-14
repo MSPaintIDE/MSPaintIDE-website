@@ -92,12 +92,40 @@ material-expansionpanel {
 }
 
 .review-card {
+    cursor: pointer;
     animation: fadein 500ms;
     transition: all 500ms, transform 250ms, height 500ms;
 }
 
 .review-margin:nth-of-type(1) {
     margin-top: -133px !important;
+}
+
+.basic-dialog {
+    width: 50%;
+    max-height: 50%;
+    overflow-y: auto;
+}
+
+.basic-dialog material-button {
+    color: #3F51B5;
+}
+
+.review-info-message {
+    font-size: 18px;
+}
+
+.review-info-author {
+    font-size: 16px;
+    line-height: 36.59px;
+    width: 100%;
+    text-align: left;
+    margin-left: 16px;
+}
+
+.review-info-author a {
+    color: #000;
+    text-decoration: none;
 }
 
 @keyframes fadein {

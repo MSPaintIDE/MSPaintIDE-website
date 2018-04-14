@@ -25,6 +25,11 @@ class AppComponent implements OnInit {
   List<Review> activeReviews = new List<Review>();
   var index = 1;
   bool movingUp = false;
+  bool paused = false;
+  bool showReviewInfo = false;
+  String reviewInfoText = '';
+  String reviewInfoAuthor = '';
+  String reviewInfoUrl = '';
 
   void routeTo(url) {
     window.location.assign(url);
@@ -49,16 +54,44 @@ class AppComponent implements OnInit {
   }
 
   void processMessages(messages) {
-    randomMessage = (JSON.decode(messages)..shuffle()).first;
+    randomMessage = (JSON.decode(messages)
+      ..shuffle()).first;
   }
 
   void processReviews(reviews) {
     var json = JSON.decode(reviews);
+    int id = 0;
     for (var quote in json) {
-      this.reviews.add(new Review(quote['quote'], quote['author'], quote['url']));
+      this.reviews.add(
+          new Review(quote['quote'], quote['author'], quote['url'], id++));
     }
 
     startReviewCycle();
+  }
+
+  void showReviewInfoDialog(Review review) {
+    reviewInfoText = review.message;
+    reviewInfoAuthor = review.author;
+    reviewInfoUrl = review.url;
+    showReviewInfo = true;
+    paused = true;
+
+    new Future.delayed(const Duration(milliseconds: 10), () {
+      document.activeElement.blur();
+    });
+
+//    InputElement clickedElement = event.target;
+//
+//    for (Element element in document.querySelectorAll(".review-card").toList()) {
+//      if (element.contains(clickedElement)) {
+//        print(element.querySelector("p").getAttribute("review-id"));
+//      }
+//    }
+  }
+
+  void hideReviewInfoDialog() {
+    showReviewInfo = false;
+    paused = false;
   }
 
   void updateActiveReviews() {
@@ -92,15 +125,17 @@ class AppComponent implements OnInit {
 
   @override
   ngOnInit() {
-    print("Getting messages...");
     getMessages().then(processMessages);
     getReviews().then(processReviews);
   }
 
   void startReviewCycle() {
-    activeReviews.add(reviews[reviews.length - 1]..rendered = true);
-    activeReviews.add(reviews[0]..rendered = true);
-    activeReviews.add(reviews[1]..rendered = true);
+    activeReviews.add(reviews[reviews.length - 1]
+      ..rendered = true);
+    activeReviews.add(reviews[0]
+      ..rendered = true);
+    activeReviews.add(reviews[1]
+      ..rendered = true);
 
     updateStuff();
   }
@@ -109,7 +144,7 @@ class AppComponent implements OnInit {
     new Future.delayed(const Duration(seconds: 2), () {
       void noDelay() {
         if (document.querySelector(".review-card:hover") ==
-            null) {
+            null && !paused) {
           updateActiveReviews();
           updateStuff();
         } else {
