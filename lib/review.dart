@@ -6,11 +6,10 @@ class Review {
   String message;
   String author;
   String url;
-  int id;
   bool rendered = false;
   bool disappearing = false;
 
-  Review(this.message, this.author, this.url, this.id);
+  Review(this.message, this.author, this.url);
 
   bool isDisappearing() {
     return disappearing;

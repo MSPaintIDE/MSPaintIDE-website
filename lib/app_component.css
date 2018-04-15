@@ -129,6 +129,11 @@ material-expansionpanel {
     text-decoration: none;
 }
 
+.material-navigation a {
+    color: #FFF;
+    text-decoration: none;
+}
+
 @keyframes fadein {
     from {
         opacity: 0;

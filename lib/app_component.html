@@ -3,19 +3,19 @@
         <div group class="mat-drawer-spacer"></div>
         <div group>
             <div group class="navbar-group">
-                <material-list-item>
+                <material-list-item (trigger)="routeTo('#')">
                     <material-icon icon="home"></material-icon>
                     Home
                 </material-list-item>
-                <material-list-item>
+                <material-list-item (trigger)="routeTo('#features')">
                     <material-icon icon="explore"></material-icon>
                     Features
                 </material-list-item>
-                <material-list-item>
+                <material-list-item (trigger)="routeTo('#advantages')">
                     <material-icon icon="done_all"></material-icon>
                     Advantages
                 </material-list-item>
-                <material-list-item>
+                <material-list-item (trigger)="routeTo('#reviews')">
                     <material-icon icon="feedback"></material-icon>
                     Reviews
                 </material-list-item>
@@ -36,13 +36,13 @@
                 </material-list-item>
             </div>
 
-            <material-list-item>
+            <material-list-item (trigger)="routeTo('mailto:inbox@rubbaboy.me')">
                 <material-icon icon="email"></material-icon>
                 Contact
             </material-list-item>
             <material-expansionpanel flat name="Share" [showSaveCancel]="false" class="share-list">
                 <material-list>
-                    <material-list-item>Twitter</material-list-item>
+                    <material-list-item (trigger)="routeTo('https://twitter.com/intent/tweet?text=My%20productivity%20has%20just%20increased%20exponentially%20with%20%40RubbaBoy%27s%20MS%20Paint%20IDE%21%20https%3A%2F%2Fms-paint-i.de%2F')">Twitter</material-list-item>
                     <material-list-item>Google+</material-list-item>
                     <material-list-item>Facebook</material-list-item>
                 </material-list>
@@ -59,16 +59,16 @@
             <span class="material-header-title">MS Paint IDE</span>
             <div class="material-spacer"></div>
             <nav class="material-navigation">
-                <a>Home</a>
+                <a href="#">Home</a>
             </nav>
             <nav class="material-navigation">
-                <a>Features</a>
+                <a href="#features">Features</a>
             </nav>
             <nav class="material-navigation">
-                <a>Advantages</a>
+                <a href="#advantages">Advantages</a>
             </nav>
             <nav class="material-navigation">
-                <a>Reviews</a>
+                <a href="#reviews">Reviews</a>
             </nav>
         </div>
     </header>
@@ -86,81 +86,31 @@
         </div>
     </div>
 
-    <h1 class="section-title">Features</h1>
+    <h1 id="features" class="section-title">Features</h1>
 
     <div class="flex-container">
         <material-expansionpanel disabled [expanded]="true" [hideExpandedHeader]="true" [showSaveCancel]="false"
-                                 class="info-card">
-            <h2>Highlighting</h2>
-            <p>MS Paint IDE comes with the most advanced code highlighting in any production IDE present to this
-                day.</p>
-        </material-expansionpanel>
-        <material-expansionpanel disabled [expanded]="true" [hideExpandedHeader]="true" [showSaveCancel]="false"
-                                 class="info-card">
-            <h2>Parsing</h2>
-            <p>Top of the line parsing is just standard with MS Paint IDE, providing with sometimes a 99% accuracy
-                reading and parsing your programs.</p>
-        </material-expansionpanel>
-        <material-expansionpanel disabled [expanded]="true" [hideExpandedHeader]="true" [showSaveCancel]="false"
-                                 class="info-card">
-            <h2>Multiple Classes</h2>
-            <p>Multiple class support, so you can make as advanced programs as you want.</p>
-        </material-expansionpanel>
-        <material-expansionpanel disabled [expanded]="true" [hideExpandedHeader]="true" [showSaveCancel]="false"
-                                 class="info-card">
-            <h2>Options</h2>
-            <p>Separate syntax highlighting, compilation, and execution, with the option to do multiple at a time for
-                maximum preformance.</p>
-        </material-expansionpanel>
-        <material-expansionpanel disabled [expanded]="true" [hideExpandedHeader]="true" [showSaveCancel]="false"
-                                 class="info-card">
-            <h2>Fastest Growing</h2>
-            <p>The fastest growing IDE by our polls, with the most features of any modern day IDE. Since this features
-                section isn't legally binding, we can say that.</p>
+                                 class="info-card"
+                                *ngFor="let feature of features">
+            <h2>{{feature.title}}</h2>
+            <p>{{feature.text}}</p>
         </material-expansionpanel>
     </div>
 
 
-    <h1 class="section-title">Advantages</h1>
+    <h1 id="advantages" class="section-title">Advantages</h1>
 
     <div class="flex-container">
         <material-expansionpanel disabled [expanded]="true" [hideExpandedHeader]="true" [showSaveCancel]="false"
-                                 class="info-card">
-            <h2>Partially Native</h2>
-            <p>The main IDE comes with your Windows computer, so you don't need to worry about potential viruses
-                with your brand new computer.</p>
-        </material-expansionpanel>
-        <material-expansionpanel disabled [expanded]="true" [hideExpandedHeader]="true" [showSaveCancel]="false"
-                                 class="info-card">
-            <h2>Popular</h2>
-            <p>Chances are, you probably know about MS Paint, or at least have heard of it. This makes adapting to
-                it easier than most programs.</p>
-        </material-expansionpanel>
-        <material-expansionpanel disabled [expanded]="true" [hideExpandedHeader]="true" [showSaveCancel]="false"
-                                 class="info-card">
-            <h2>Oldest</h2>
-            <p>MS Paint IDE's core program, MS Paint, is older than almost every modern IDE, also making it easily
-                recognisable and bug-resistant.</p>
-        </material-expansionpanel>
-        <material-expansionpanel disabled [expanded]="true" [hideExpandedHeader]="true" [showSaveCancel]="false"
-                                 class="info-card">
-            <h2>Lightweight</h2>
-            <p>MS Paint IDE is extremely lightweight, and is optimised for Windows systems.</p>
-        </material-expansionpanel>
-        <material-expansionpanel disabled [expanded]="true" [hideExpandedHeader]="true" [showSaveCancel]="false"
-                                 class="info-card">
-            <h2>Share Code Easily</h2>
-            <p>Code sharing is easy, as your code is just an image.</p>
-        </material-expansionpanel>
-        <material-expansionpanel disabled [expanded]="true" [hideExpandedHeader]="true" [showSaveCancel]="false"
-                                 class="info-card">
-            <h2>Superiority</h2>
-            <p>It's not Eclipse.</p>
+                                 class="info-card"
+                                 *ngFor="let advantage of advantages">
+            <h2>{{advantage.title}}</h2>
+            <p>{{advantage.text}}</p>
         </material-expansionpanel>
     </div>
 
 
-    <h1 class="section-title">Reviews</h1>
+    <h1 id="reviews" class="section-title">Reviews</h1>
 
     <div class="flex-container">
         <div class="review-container">

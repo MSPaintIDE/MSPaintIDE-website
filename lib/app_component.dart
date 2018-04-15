@@ -1,10 +1,10 @@
+import 'package:MSPaintIDEWebsite/info_card_data.dart';
+import 'package:MSPaintIDEWebsite/review.dart';
 import 'package:angular/angular.dart';
 import 'dart:async';
 import 'dart:convert';
 import 'dart:html';
 import 'package:angular_components/angular_components.dart';
-
-import 'review.dart';
 
 // AngularDart info: https://webdev.dartlang.org/angular
 // Components info: https://webdev.dartlang.org/components
@@ -23,6 +23,8 @@ class AppComponent implements OnInit {
   var randomMessage;
   List<Review> reviews = new List<Review>();
   List<Review> activeReviews = new List<Review>();
+  List<InfoCardData> features = new List<InfoCardData>();
+  List<InfoCardData> advantages = new List<InfoCardData>();
   var index = 1;
   bool movingUp = false;
   bool paused = false;
@@ -35,8 +37,8 @@ class AppComponent implements OnInit {
     window.location.assign(url);
   }
 
-  Future getMessages() async {
-    var path = 'https://ms-paint-i.de/messages.json';
+  Future getData() async {
+    var path = 'https://ms-paint-i.de/data.json';
     try {
       return await HttpRequest.getString(path);
     } catch (e) {
@@ -44,26 +46,21 @@ class AppComponent implements OnInit {
     }
   }
 
-  Future getReviews() async {
-    var path = 'https://ms-paint-i.de/quotes.json';
-    try {
-      return await HttpRequest.getString(path);
-    } catch (e) {
-      print('Couldn\'t open $path');
+  void processData(data) {
+    var json = JSON.decode(data);
+
+    for (var quote in  json['quotes'].toList()) {
+      reviews.add(new Review(quote['quote'], quote['author'], quote['url']));
     }
-  }
 
-  void processMessages(messages) {
-    randomMessage = (JSON.decode(messages)
-      ..shuffle()).first;
-  }
+    randomMessage = (json['messages'].toList()..shuffle()).first;
 
-  void processReviews(reviews) {
-    var json = JSON.decode(reviews);
-    int id = 0;
-    for (var quote in json) {
-      this.reviews.add(
-          new Review(quote['quote'], quote['author'], quote['url'], id++));
+    for (var feature in json['features'].toList()) {
+      features.add(new InfoCardData(feature['title'], feature['text']));
+    }
+
+    for (var advantage in json['advantages'].toList()) {
+      advantages.add(new InfoCardData(advantage['title'], advantage['text']));
     }
 
     startReviewCycle();
@@ -117,8 +114,7 @@ class AppComponent implements OnInit {
 
   @override
   ngOnInit() {
-    getMessages().then(processMessages);
-    getReviews().then(processReviews);
+    getData().then(processData);
   }
 
   void startReviewCycle() {
