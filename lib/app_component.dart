@@ -29,6 +29,8 @@ class AppComponent implements OnInit {
   bool movingUp = false;
   bool paused = false;
   bool showReviewInfo = false;
+  bool showShare = false;
+  bool showAllReviews = false;
   String reviewInfoText = '';
   String reviewInfoAuthor = '';
   String reviewInfoUrl = '';
@@ -111,6 +113,8 @@ class AppComponent implements OnInit {
     temp = temp - ((temp ~/ reviews.length) * reviews.length);
     return temp;
   }
+
+  void toggle() => print("HGELLOOO");
 
   @override
   ngOnInit() {

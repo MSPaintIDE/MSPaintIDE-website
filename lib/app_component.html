@@ -42,9 +42,12 @@
             </material-list-item>
             <material-expansionpanel flat name="Share" [showSaveCancel]="false" class="share-list">
                 <material-list>
-                    <material-list-item (trigger)="routeTo('https://twitter.com/intent/tweet?text=My%20productivity%20has%20just%20increased%20exponentially%20with%20%40RubbaBoy%27s%20MS%20Paint%20IDE%21%20https%3A%2F%2Fms-paint-i.de%2F')">Twitter</material-list-item>
-                    <material-list-item>Google+</material-list-item>
-                    <material-list-item>Facebook</material-list-item>
+                    <material-list-item
+                            (trigger)="routeTo('https://twitter.com/intent/tweet?text=My%20productivity%20has%20just%20increased%20exponentially%20with%20%40RubbaBoy%27s%20MS%20Paint%20IDE%21%20https%3A%2F%2Fms-paint-i.de%2F')">
+                        Twitter
+                    </material-list-item>
+                    <material-list-item (trigger)="showShare = true">Google+</material-list-item>
+                    <material-list-item (trigger)="showShare = true">Facebook</material-list-item>
                 </material-list>
             </material-expansionpanel>
         </div>
@@ -72,6 +75,7 @@
             </nav>
         </div>
     </header>
+    <div class="header-spacer"></div>
     <div class="home-container">
         <div class="home-centered">
             <h1>MS Paint IDE</h1>
@@ -91,7 +95,7 @@
     <div class="flex-container">
         <material-expansionpanel disabled [expanded]="true" [hideExpandedHeader]="true" [showSaveCancel]="false"
                                  class="info-card"
-                                *ngFor="let feature of features">
+                                 *ngFor="let feature of features">
             <h2>{{feature.title}}</h2>
             <p>{{feature.text}}</p>
         </material-expansionpanel>
@@ -126,6 +130,25 @@
                 </material-expansionpanel>
             </template>
         </div>
+
+        <div class="flex-container more-reviews-button">
+            <material-button raised (click)="showAllReviews = true" *ngIf="!showAllReviews">See All Reviews</material-button>
+            <material-button raised (click)="showAllReviews = false" *ngIf="showAllReviews">Hide All Reviews</material-button>
+        </div>
+
+        <div *ngIf="showAllReviews" class="flex-container more-reviews-container">
+            <material-expansionpanel-set>
+
+                <template ngFor let-review [ngForOf]="reviews">
+                    <material-expansionpanel
+                            name="{{review.message}}"
+                            [showSaveCancel]="false">
+                        <i>- <a href="{{review.url}}">{{review.author}}</a></i>
+                    </material-expansionpanel>
+                </template>
+
+            </material-expansionpanel-set>
+        </div>
     </div>
 
     <modal [visible]="showReviewInfo">
@@ -135,6 +158,16 @@
             <div footer>
                 <i class="review-info-author">- <a href="{{reviewInfoUrl}}">{{reviewInfoAuthor}}</a></i>
                 <material-button clear-size (trigger)="hideReviewInfoDialog()">Close</material-button>
+            </div>
+        </material-dialog>
+    </modal>
+
+    <modal [visible]="showShare">
+        <material-dialog class="basic-dialog" [autoDismissable]="true" (dismiss)="showShare = false">
+            <p class="review-info-message">Share it yourself</p>
+
+            <div footer>
+                <material-button clear-size (trigger)="showShare = false">Close</material-button>
             </div>
         </material-dialog>
     </modal>

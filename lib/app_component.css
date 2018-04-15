@@ -10,13 +10,29 @@
 @include mat-temporary-drawer-width(50 %);
 }
 
+.material-header {
+    position: fixed !important;
+    top: 0;
+    z-index: 999 !important;
+}
+
+material-drawer {
+    position: fixed !important;
+    z-index: 999 !important;
+}
+
+.header-spacer {
+    height: 64px;
+}
+
 .section-title {
     text-align: center;
     font-size: 2.5em;
 }
 
 .section-title:not(:first-of-type) {
-    margin-top: 100px;
+    margin-top: 36px;
+    padding-top: 64px;
 }
 
 .material-content > div {
@@ -86,7 +102,6 @@ material-expansionpanel {
     width: 60vw;
     height: 415px !important;
     max-height: 415px !important;
-    margin-bottom: 25vh;
     overflow-x: visible;
     overflow-y: hidden;
 }
@@ -132,6 +147,14 @@ material-expansionpanel {
 .material-navigation a {
     color: #FFF;
     text-decoration: none;
+}
+
+.more-reviews-button {
+    margin-top: 25px;
+}
+
+.more-reviews-container {
+    margin-top: 50px;
 }
 
 @keyframes fadein {
