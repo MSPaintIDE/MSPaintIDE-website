@@ -93,3 +93,7 @@ material-expansionpanel header {
 material-expansionpanel .background {
     background-color: #fff !important;
 }
+
+.review-container, .more-reviews-container {
+    transition: opacity 1s ease, max-height 1s ease;
+}

@@ -117,7 +117,7 @@
     <h1 id="reviews" class="section-title">Reviews</h1>
 
     <div class="flex-container">
-        <div class="review-container">
+        <div class="review-container" [class.reviews-gone]="showAllReviews">
             <template ngFor let-review [ngForOf]="activeReviews">
                 <material-expansionpanel review disabled [expanded]="true" [hideExpandedHeader]="true"
                                          (click)="showReviewInfoDialog(review)"
@@ -136,7 +136,7 @@
             <material-button raised (click)="showAllReviews = false" *ngIf="showAllReviews">Hide All Reviews</material-button>
         </div>
 
-        <div *ngIf="showAllReviews" class="flex-container more-reviews-container">
+        <div class="flex-container more-reviews-container" [class.reviews-gone]="!showAllReviews">
             <material-expansionpanel-set>
 
                 <template ngFor let-review [ngForOf]="reviews">

@@ -157,6 +157,11 @@ material-expansionpanel {
     margin-top: 50px;
 }
 
+.reviews-gone {
+    opacity: 0;
+    max-height: 0 !important;
+}
+
 @keyframes fadein {
     from {
         opacity: 0;

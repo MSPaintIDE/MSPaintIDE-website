@@ -114,6 +114,14 @@ class AppComponent implements OnInit {
     return temp;
   }
 
+//  void showAllReviews() {
+//    showingAllReviews = true;
+//  }
+//
+//  void hideAllReviews() {
+//    showingAllReviews = false;
+//  }
+
   @override
   ngOnInit() {
     getData().then(processData);
