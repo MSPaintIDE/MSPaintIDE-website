@@ -114,8 +114,6 @@ class AppComponent implements OnInit {
     return temp;
   }
 
-  void toggle() => print("HGELLOOO");
-
   @override
   ngOnInit() {
     getData().then(processData);
