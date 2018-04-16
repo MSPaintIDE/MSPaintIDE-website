@@ -30,10 +30,15 @@ h1, h2, h3, h4, h5, h6, material-button .content {
     left: calc(50vw);
     top: calc(50vh);
     transform: translate(-50%, -50%);
+    transition: transform 2s
 }
 
 .disappear-preloader {
     opacity: 0;
+}
+
+.disappear-preloader #preloader-image {
+    transform: translate(-50%, -50%) scale(0.85);
 }
 
 /*    There's probably a way to optimise this, but don't give me crap, this is like 5000% better than the last website    */
