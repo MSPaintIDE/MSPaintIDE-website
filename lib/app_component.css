@@ -158,8 +158,16 @@ material-expansionpanel {
 }
 
 .reviews-gone {
-    opacity: 0;
     max-height: 0 !important;
+}
+
+.more-reviews-container material-expansionpanel {
+    max-height: 57px !important;
+}
+
+.reviews-gone {
+    max-height: 0 !important;
+    opacity: 0;
 }
 
 @keyframes fadein {

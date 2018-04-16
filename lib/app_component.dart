@@ -51,7 +51,7 @@ class AppComponent implements OnInit {
   void processData(data) {
     var json = JSON.decode(data);
 
-    for (var quote in  json['quotes'].toList()) {
+    for (var quote in json['quotes'].toList()) {
       reviews.add(new Review(quote['quote'], quote['author'], quote['url']));
     }
 
@@ -64,6 +64,8 @@ class AppComponent implements OnInit {
     for (var advantage in json['advantages'].toList()) {
       advantages.add(new InfoCardData(advantage['title'], advantage['text']));
     }
+
+    removePreloader();
 
     startReviewCycle();
   }
@@ -114,13 +116,20 @@ class AppComponent implements OnInit {
     return temp;
   }
 
-//  void showAllReviews() {
-//    showingAllReviews = true;
-//  }
-//
-//  void hideAllReviews() {
-//    showingAllReviews = false;
-//  }
+  void removePreloader() {
+    new Future.delayed(const Duration(milliseconds: 500), () {
+      var element = querySelector('my-app');
+      if (element.classes.contains("completed")) {
+        querySelector('#preloader-wrapper').classes.add("disappear-preloader");
+
+        new Future.delayed(const Duration(seconds: 1), () {
+          querySelector('#preloader-wrapper').remove();
+        });
+      } else {
+        removePreloader();
+      }
+    });
+  }
 
   @override
   ngOnInit() {
@@ -128,12 +137,9 @@ class AppComponent implements OnInit {
   }
 
   void startReviewCycle() {
-    activeReviews.add(reviews[reviews.length - 1]
-      ..rendered = true);
-    activeReviews.add(reviews[0]
-      ..rendered = true);
-    activeReviews.add(reviews[1]
-      ..rendered = true);
+    activeReviews.add(reviews[reviews.length - 1]..rendered = true);
+    activeReviews.add(reviews[0]..rendered = true);
+    activeReviews.add(reviews[1]..rendered = true);
 
     updateStuff();
   }
@@ -141,8 +147,7 @@ class AppComponent implements OnInit {
   void updateStuff() {
     new Future.delayed(const Duration(seconds: 2), () {
       void noDelay() {
-        if (document.querySelector(".review-card:hover") ==
-            null && !paused) {
+        if (document.querySelector(".review-card:hover") == null && !paused) {
           updateActiveReviews();
           updateStuff();
         } else {
