@@ -144,6 +144,6 @@ material-expansionpanel .background {
     background-color: #fff !important;
 }
 
-.review-container, .more-reviews-container {
-    transition: opacity 1s ease, max-height 1s ease;
+.review-container, .more-reviews-container, .more-reviews-container, .more-reviews-container material-expansionpanel-set {
+    transition: opacity 1s ease, max-height 1s ease, scale 1s ease, transform 1s ease;
 }

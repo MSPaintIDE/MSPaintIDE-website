@@ -157,12 +157,8 @@ material-expansionpanel {
     margin-top: 50px;
 }
 
-.reviews-gone {
-    max-height: 0 !important;
-}
-
-.more-reviews-container material-expansionpanel {
-    max-height: 57px !important;
+.reviews-gone material-expansionpanel-set {
+    transform: scaleY(0);
 }
 
 .reviews-gone {
