@@ -1,3 +1,7 @@
+@import 'package:angular_components/css/material/material';
+@import 'package:angular_components/material_expansionpanel/mixins';
+@import 'package:angular_components/material_yes_no_buttons/mixins';
+
 :host {
     width: 100%;
     height: 100%;
@@ -5,9 +9,23 @@
     margin: 0;
 }
 
-.custom-width {
-@include mat-drawer-width(50 %);
-@include mat-temporary-drawer-width(50 %);
+//.custom-width {
+//    @include mat-drawer-width(50%);
+//    @include mat-temporary-drawer-width(50%);
+//}
+
+.dark {
+    @include expansionpanel-dark-theme;
+}
+
+.theme-toggle {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+.theme-toggle .material-icons {
+    font-size: 30px;
 }
 
 .material-header {

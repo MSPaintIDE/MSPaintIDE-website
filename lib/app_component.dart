@@ -5,6 +5,7 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:html';
 import 'package:angular_components/angular_components.dart';
+import 'package:angular_components/material_expansionpanel/material_expansionpanel.dart';
 
 // AngularDart info: https://webdev.dartlang.org/angular
 // Components info: https://webdev.dartlang.org/components
@@ -13,11 +14,18 @@ import 'package:angular_components/angular_components.dart';
   selector: 'my-app',
   styleUrls: const [
     'app_component.css',
-    'package:angular_components/app_layout/layout.scss.css'
+    'package:angular_components/app_layout/layout.scss.css',
   ],
   templateUrl: 'app_component.html',
-  directives: const [CORE_DIRECTIVES, materialDirectives],
-  providers: const [materialProviders],
+  directives: const [
+    DarkThemeDirective,
+    CORE_DIRECTIVES,
+    materialDirectives,
+    MaterialExpansionPanel
+  ],
+  providers: const [
+    materialProviders
+  ],
 )
 class AppComponent implements OnInit {
   var randomMessage;
@@ -31,6 +39,7 @@ class AppComponent implements OnInit {
   bool showReviewInfo = false;
   bool showShare = false;
   bool showAllReviews = false;
+  bool darkThemee = false;
   String reviewInfoText = '';
   String reviewInfoAuthor = '';
   String reviewInfoUrl = '';

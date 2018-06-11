@@ -75,6 +75,13 @@
             </nav>
         </div>
     </header>
+
+    <div class="theme-toggle">
+        <material-button icon class="material-drawer-button" (trigger)="darkThemee">
+            <material-icon icon="invert_colors"></material-icon>
+        </material-button>
+    </div>
+
     <div class="header-spacer"></div>
     <div class="home-container">
         <div class="home-centered">
@@ -91,6 +98,13 @@
     </div>
 
     <h1 id="features" class="section-title">Features</h1>
+
+    <material-expansionpanel class="dark"
+                             name="Dark theme"
+                             secondaryText="Optional"
+                             [expanded]="true">
+        This panel uses the Dark theme mixin.
+    </material-expansionpanel>
 
     <div class="flex-container">
         <material-expansionpanel disabled [expanded]="true" [hideExpandedHeader]="true" [showSaveCancel]="false"
@@ -119,7 +133,7 @@
     <div class="flex-container">
         <div class="review-container" [class.reviews-gone]="showAllReviews">
             <template ngFor let-review [ngForOf]="activeReviews">
-                <material-expansionpanel review disabled [expanded]="true" [hideExpandedHeader]="true"
+                <material-expansionpanel darkTheme review disabled [expanded]="true" [hideExpandedHeader]="true"
                                          (click)="showReviewInfoDialog(review)"
                                          [showSaveCancel]="false"
                                          class="review-card" *ngIf="review.rendered"
@@ -141,6 +155,7 @@
 
                 <template ngFor let-review [ngForOf]="reviews">
                     <material-expansionpanel
+                            class="dark"
                             name="{{review.message}}"
                             [showSaveCancel]="false">
                         <i>- <a href="{{review.url}}">{{review.author}}</a></i>
