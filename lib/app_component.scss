@@ -1,21 +1,64 @@
 @import 'package:angular_components/css/material/material';
+@import 'package:angular_components/material_button/mixins';
 @import 'package:angular_components/material_expansionpanel/mixins';
 @import 'package:angular_components/material_yes_no_buttons/mixins';
+
+@mixin colorize($selector, $color) {
+  $raised: $selector + '[raised]';
+  @include button-background-color($raised, $color);
+  @include button-color($raised, $mat-white);
+
+  $not-raised: $selector + ':not([raised])';
+  @include button-color($not-raised, $color);
+}
 
 :host {
     width: 100%;
     height: 100%;
     padding: 0;
-    margin: 0;
+    //margin: 0;
+
+  @include colorize("material-button.red", $mat-red);
+  @include colorize("material-button.blue", $mat-blue);
+  @include colorize("material-button.green", $mat-green);
+  @include colorize("material-fab.red", $mat-red);
+  @include colorize("material-fab.blue", $mat-blue);
+  @include colorize("material-fab.green", $mat-green);
+  @include icon-button-color("material-button.blue-icon", $mat-blue);
+  @include raised-button($mat-blue);
+  @include raised-button('.raised-example');
+  //@include button-dense-theme('.dense-example');
 }
 
-//.custom-width {
-//    @include mat-drawer-width(50%);
-//    @include mat-temporary-drawer-width(50%);
-//}
+.dark:not(.theme-toggle) {
+  //@include expansionpanel-dark-theme;
+  @include expansionpanel-colors($mat-grey-700, $mat-white);
+  @include expansionpanel-focused-colors($mat-grey-800, $mat-white);
 
-.dark {
-    @include expansionpanel-dark-theme;
+  color: $mat-white;
+  background: $mat-grey-800;
+}
+
+.dark.side-drawer div { // mat-drawer-spacer
+  box-shadow: none !important;
+  border-color: $mat-grey-800 !important;
+}
+
+.dark.side-drawer material-list-item {
+  box-shadow: none !important;
+  border-color: $mat-grey-800 !important;
+}
+
+.dark.side-drawer material-list-item:hover {
+  background-color: $mat-grey-600 !important;
+}
+
+.dark material-icon {
+    color: $mat-white !important;
+}
+
+.theme-toggle .dark {
+  color: $mat-white;
 }
 
 .theme-toggle {

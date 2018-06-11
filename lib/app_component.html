@@ -1,59 +1,59 @@
-<material-drawer temporary #drawer="drawer">
-    <material-list *deferredContent class="sideDrawer">
+<material-drawer temporary #drawer="drawer" [class.dark-drawer]="darkTheme">
+    <material-list *deferredContent class="side-drawer" [class.dark]="darkTheme">
         <div group class="mat-drawer-spacer"></div>
         <div group>
             <div group class="navbar-group">
-                <material-list-item (trigger)="routeTo('#')">
+                <material-list-item (trigger)="routeTo('#')" [class.dark]="darkTheme">
                     <material-icon icon="home"></material-icon>
                     Home
                 </material-list-item>
-                <material-list-item (trigger)="routeTo('#features')">
+                <material-list-item (trigger)="routeTo('#features')" [class.dark]="darkTheme">
                     <material-icon icon="explore"></material-icon>
                     Features
                 </material-list-item>
-                <material-list-item (trigger)="routeTo('#advantages')">
+                <material-list-item (trigger)="routeTo('#advantages')" [class.dark]="darkTheme">
                     <material-icon icon="done_all"></material-icon>
                     Advantages
                 </material-list-item>
-                <material-list-item (trigger)="routeTo('#reviews')">
+                <material-list-item (trigger)="routeTo('#reviews')" [class.dark]="darkTheme">
                     <material-icon icon="feedback"></material-icon>
                     Reviews
                 </material-list-item>
             </div>
 
             <div group>
-                <material-list-item (trigger)="routeTo('https://mspaint.shitprojects.download/')">
+                <material-list-item (trigger)="routeTo('https://mspaint.shitprojects.download/')" [class.dark]="darkTheme">
                     <material-icon icon="whatshot"></material-icon>
                     Spigot
                 </material-list-item>
-                <material-list-item (trigger)="routeTo('https://github.com/RubbaBoy/MSPaintIDE/')">
+                <material-list-item (trigger)="routeTo('https://github.com/RubbaBoy/MSPaintIDE/')" [class.dark]="darkTheme">
                     <material-icon icon="code"></material-icon>
                     GitHub
                 </material-list-item>
-                <material-list-item (trigger)="routeTo('https://github.com/RubbaBoy/MSPaintIDE/releases')">
+                <material-list-item (trigger)="routeTo('https://github.com/RubbaBoy/MSPaintIDE/releases')" [class.dark]="darkTheme">
                     <material-icon icon="file_download"></material-icon>
                     Download
                 </material-list-item>
             </div>
 
-            <material-list-item (trigger)="routeTo('mailto:inbox@rubbaboy.me')">
+            <material-list-item (trigger)="routeTo('mailto:inbox@rubbaboy.me')" [class.dark]="darkTheme">
                 <material-icon icon="email"></material-icon>
                 Contact
             </material-list-item>
-            <material-expansionpanel flat name="Share" [showSaveCancel]="false" class="share-list">
+            <material-expansionpanel flat name="Share" [showSaveCancel]="false" class="share-list" [class.dark]="darkTheme">
                 <material-list>
-                    <material-list-item
+                    <material-list-item [class.dark]="darkTheme"
                             (trigger)="routeTo('https://twitter.com/intent/tweet?text=My%20productivity%20has%20just%20increased%20exponentially%20with%20%40RubbaBoy%27s%20MS%20Paint%20IDE%21%20https%3A%2F%2Fms-paint-i.de%2F')">
                         Twitter
                     </material-list-item>
-                    <material-list-item (trigger)="showShare = true">Google+</material-list-item>
-                    <material-list-item (trigger)="showShare = true">Facebook</material-list-item>
+                    <material-list-item (trigger)="showShare = true" [class.dark]="darkTheme">Google+</material-list-item>
+                    <material-list-item (trigger)="showShare = true" [class.dark]="darkTheme">Facebook</material-list-item>
                 </material-list>
             </material-expansionpanel>
         </div>
     </material-list>
 </material-drawer>
-<div class="material-content">
+<div class="material-content" [class.dark]="darkTheme">
     <header class="material-header shadow">
         <div class="material-header-row">
             <material-button icon class="material-drawer-button" (trigger)="drawer.toggle()">
@@ -76,8 +76,8 @@
         </div>
     </header>
 
-    <div class="theme-toggle">
-        <material-button icon class="material-drawer-button" (trigger)="darkThemee">
+    <div class="theme-toggle" [class.dark]="darkTheme">
+        <material-button icon class="material-drawer-button" (click)="toggleDarkTheme()">
             <material-icon icon="invert_colors"></material-icon>
         </material-button>
     </div>
@@ -98,13 +98,6 @@
     </div>
 
     <h1 id="features" class="section-title">Features</h1>
-
-    <material-expansionpanel class="dark"
-                             name="Dark theme"
-                             secondaryText="Optional"
-                             [expanded]="true">
-        This panel uses the Dark theme mixin.
-    </material-expansionpanel>
 
     <div class="flex-container">
         <material-expansionpanel disabled [expanded]="true" [hideExpandedHeader]="true" [showSaveCancel]="false"
@@ -133,7 +126,7 @@
     <div class="flex-container">
         <div class="review-container" [class.reviews-gone]="showAllReviews">
             <template ngFor let-review [ngForOf]="activeReviews">
-                <material-expansionpanel darkTheme review disabled [expanded]="true" [hideExpandedHeader]="true"
+                <material-expansionpanel review disabled [expanded]="true" [hideExpandedHeader]="true"
                                          (click)="showReviewInfoDialog(review)"
                                          [showSaveCancel]="false"
                                          class="review-card" *ngIf="review.rendered"
@@ -146,8 +139,8 @@
         </div>
 
         <div class="flex-container more-reviews-button">
-            <material-button raised (click)="showAllReviews = true" *ngIf="!showAllReviews">See All Reviews</material-button>
-            <material-button raised (click)="showAllReviews = false" *ngIf="showAllReviews">Hide All Reviews</material-button>
+            <material-button raised (click)="showAllReviews = true" *ngIf="!showAllReviews" [class.acx-theme-dark]="darkTheme">See All Reviews</material-button>
+            <material-button raised (click)="showAllReviews = false" *ngIf="showAllReviews" [class.acx-theme-dark]="darkTheme">Hide All Reviews</material-button>
         </div>
 
         <div class="flex-container more-reviews-container" [class.reviews-gone]="!showAllReviews">
@@ -155,7 +148,7 @@
 
                 <template ngFor let-review [ngForOf]="reviews">
                     <material-expansionpanel
-                            class="dark"
+                            [class.dark]="darkTheme"
                             name="{{review.message}}"
                             [showSaveCancel]="false">
                         <i>- <a href="{{review.url}}">{{review.author}}</a></i>

@@ -6,6 +6,9 @@ import 'dart:convert';
 import 'dart:html';
 import 'package:angular_components/angular_components.dart';
 import 'package:angular_components/material_expansionpanel/material_expansionpanel.dart';
+import 'package:angular_components/material_button/material_button.dart';
+import 'package:angular_components/material_icon/material_icon.dart';
+import 'package:angular_components/theme/dark_theme.dart';
 
 // AngularDart info: https://webdev.dartlang.org/angular
 // Components info: https://webdev.dartlang.org/components
@@ -21,7 +24,9 @@ import 'package:angular_components/material_expansionpanel/material_expansionpan
     DarkThemeDirective,
     CORE_DIRECTIVES,
     materialDirectives,
-    MaterialExpansionPanel
+    MaterialExpansionPanel,
+    MaterialButtonComponent,
+    MaterialIconComponent
   ],
   providers: const [
     materialProviders
@@ -39,10 +44,20 @@ class AppComponent implements OnInit {
   bool showReviewInfo = false;
   bool showShare = false;
   bool showAllReviews = false;
-  bool darkThemee = false;
+  bool darkTheme = false;
   String reviewInfoText = '';
   String reviewInfoAuthor = '';
   String reviewInfoUrl = '';
+
+  void toggleDarkTheme() {
+    darkTheme = !darkTheme;
+
+    if (darkTheme) {
+      document.querySelector('html').classes.add('dark_body');
+    } else {
+      document.querySelector('html').classes.remove('dark_body');
+    }
+  }
 
   void routeTo(url) {
     window.location.assign(url);

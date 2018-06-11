@@ -16,6 +16,27 @@ h1, h2, h3, h4, h5, h6, material-button .content {
     font-family: Montserrat, Helvetica, Arial, sans-serif;
 }
 
+.dark_body {
+    background: #424242; /* $mat-grey-800 */
+}
+
+.dark-drawer .drawer-content {
+    background-color: #424242 !important; /* $mat-grey-800 */
+}
+
+.dark > .panel {
+    background-color: #424242 !important; /* $mat-grey-800 */
+}
+
+.dark > .panel material-list material-list-item {
+    box-shadow: none !important;
+    background-color: #424242 !important; /* $mat-grey-800 */
+}
+
+.dark > .panel material-list material-list-item:hover {
+    background-color: #757575 !important; /* $mat-grey-600 */
+}
+
 #preloader-wrapper {
     background-color: white;
     width: 100%;
