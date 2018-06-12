@@ -160,22 +160,22 @@
     </div>
 
     <modal [visible]="showReviewInfo">
-        <material-dialog class="basic-dialog" [autoDismissable]="true" (dismiss)="hideReviewInfoDialog()">
+        <material-dialog class="basic-dialog" [autoDismissable]="true" (dismiss)="hideReviewInfoDialog()" [class.dark]="darkTheme">
             <p class="review-info-message">{{reviewInfoText}}</p>
 
             <div footer>
-                <i class="review-info-author">- <a href="{{reviewInfoUrl}}">{{reviewInfoAuthor}}</a></i>
-                <material-button clear-size (trigger)="hideReviewInfoDialog()">Close</material-button>
+                <i class="review-info-author">- <a href="{{reviewInfoUrl}}" [class.dark]="darkTheme">{{reviewInfoAuthor}}</a></i>
+                <material-button clear-size (trigger)="hideReviewInfoDialog()" [class.dark]="darkTheme">Close</material-button>
             </div>
         </material-dialog>
     </modal>
 
     <modal [visible]="showShare">
-        <material-dialog class="basic-dialog" [autoDismissable]="true" (dismiss)="showShare = false">
+        <material-dialog class="basic-dialog" [autoDismissable]="true" (dismiss)="showShare = false" [class.dark]="darkTheme">
             <p class="review-info-message">Share it yourself</p>
 
             <div footer>
-                <material-button clear-size (trigger)="showShare = false">Close</material-button>
+                <material-button clear-size (trigger)="showShare = false" [class.dark]="darkTheme">Close</material-button>
             </div>
         </material-dialog>
     </modal>

@@ -39,6 +39,10 @@ h1, h2, h3, h4, h5, h6, material-button .content {
     background-color: var(--sidebar-color-hover) !important; /* $mat-grey-600 */
 }
 
+material-expansionpanel.dark header:hover, material-expansionpanel.dark header:focus {
+    background-color: var(--sidebar-color-hover) !important; /* $mat-grey-600 */
+}
+
 #preloader-wrapper {
     background-color: white;
     width: 100%;
