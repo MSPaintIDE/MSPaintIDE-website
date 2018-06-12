@@ -6,6 +6,8 @@ body {
     width: 100%;
     height: 100%;
     margin: 0 auto 25vw;
+    --sidebar-color: #616161;
+    --sidebar-color-hover: #757575;
 }
 
 h1, h2, h3, h4, h5, h6, material-button .content {
@@ -17,24 +19,24 @@ h1, h2, h3, h4, h5, h6, material-button .content {
 }
 
 .dark_body {
-    background: #424242; /* $mat-grey-800 */
+    background-color: #424242; /* $mat-grey-800 */
 }
 
 .dark-drawer .drawer-content {
-    background-color: #424242 !important; /* $mat-grey-800 */
+    background-color: var(--sidebar-color) !important; /* $mat-grey-800 */
 }
 
 .dark > .panel {
-    background-color: #424242 !important; /* $mat-grey-800 */
+    background-color: var(--sidebar-color) !important; /* $mat-grey-800 */
 }
 
 .dark > .panel material-list material-list-item {
     box-shadow: none !important;
-    background-color: #424242 !important; /* $mat-grey-800 */
+    background-color: var(--sidebar-color) !important; /* $mat-grey-800 */
 }
 
 .dark > .panel material-list material-list-item:hover {
-    background-color: #757575 !important; /* $mat-grey-600 */
+    background-color: var(--sidebar-color-hover) !important; /* $mat-grey-600 */
 }
 
 #preloader-wrapper {

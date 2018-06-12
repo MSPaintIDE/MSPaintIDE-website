@@ -16,7 +16,7 @@
     width: 100%;
     height: 100%;
     padding: 0;
-    //margin: 0;
+    margin: 0;
 
   @include colorize("material-button.red", $mat-red);
   @include colorize("material-button.blue", $mat-blue);
@@ -27,8 +27,9 @@
   @include icon-button-color("material-button.blue-icon", $mat-blue);
   @include raised-button($mat-blue);
   @include raised-button('.raised-example');
-  //@include button-dense-theme('.dense-example');
 }
+
+$sidebar-color: $mat-grey-700;
 
 .dark:not(.theme-toggle) {
   //@include expansionpanel-dark-theme;
@@ -39,14 +40,25 @@
   background: $mat-grey-800;
 }
 
+.dark.side-drawer {
+  //@include expansionpanel-dark-theme;
+  @include expansionpanel-colors($mat-grey-700, $mat-white);
+  @include expansionpanel-focused-colors($sidebar-color, $mat-white);
+
+  color: $mat-white;
+  background: $sidebar-color;
+}
+
 .dark.side-drawer div { // mat-drawer-spacer
   box-shadow: none !important;
-  border-color: $mat-grey-800 !important;
+  border-color: $sidebar-color !important;
+  background-color: $sidebar-color !important;
 }
 
 .dark.side-drawer material-list-item {
   box-shadow: none !important;
-  border-color: $mat-grey-800 !important;
+  border-color: $sidebar-color !important;
+  background-color: $sidebar-color !important;
 }
 
 .dark.side-drawer material-list-item:hover {
