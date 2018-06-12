@@ -31,7 +31,7 @@
 
 $sidebar-color: $mat-grey-700;
 
-.dark:not(.theme-toggle) {
+.dark:not(.theme-toggle):not(a) {
   //@include expansionpanel-dark-theme;
   @include expansionpanel-colors($mat-grey-700, $mat-white);
   @include expansionpanel-focused-colors($mat-grey-800, $mat-white);
@@ -67,6 +67,10 @@ $sidebar-color: $mat-grey-700;
 
 .dark material-icon {
     color: $mat-white !important;
+}
+
+a.dark {
+  color: $mat-white;
 }
 
 .theme-toggle .dark {
