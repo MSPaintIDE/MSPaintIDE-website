@@ -6,7 +6,7 @@ body {
     width: 100%;
     height: 100%;
     margin: 0 auto 25vw;
-    --sidebar-color: #616161;
+    --sidebar-color: #2F3136;
     --sidebar-color-hover: #757575;
 }
 
@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6, material-button .content {
 }
 
 .dark_body {
-    background-color: #424242; /* $mat-grey-800 */
+    background-color: #202225;
 }
 
 .dark-drawer .drawer-content {
