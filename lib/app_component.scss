@@ -29,15 +29,15 @@
   @include raised-button('.raised-example');
 }
 
-$sidebar-color: #2F3136;
+$sidebar-color: $mat-grey-800;
 
 .dark:not(.theme-toggle):not(a):not(material-list) {
   //@include expansionpanel-dark-theme;
-  @include expansionpanel-colors(#2F3136, $mat-white);
-  @include expansionpanel-focused-colors(#202225, $mat-white);
+  @include expansionpanel-colors($mat-grey-800, $mat-white);
+  @include expansionpanel-focused-colors($mat-grey-900, $mat-white);
 
   color: $mat-white;
-  background: #202225;
+  background: $mat-grey-900;
 }
 
 .dark.side-drawer {
@@ -62,7 +62,7 @@ $sidebar-color: #2F3136;
 }
 
 .dark.side-drawer material-list-item:hover {
-  background-color: #36393F !important;
+  background-color: $mat-grey-700 !important;
 }
 
 .dark material-icon {
