@@ -29,7 +29,7 @@
   @include raised-button('.raised-example');
 }
 
-  $sidebar-color: #2F3136;
+$sidebar-color: #2F3136;
 
 .dark:not(.theme-toggle):not(a):not(material-list) {
   //@include expansionpanel-dark-theme;
