@@ -1,7 +1,7 @@
 import 'package:angular/angular.dart';
 
-import 'package:MSPaintIDEWebsite/app_component.dart';
+import 'package:MSPaintIDEWebsite/app_component.template.dart' as ng;
 
 void main() {
-  bootstrap(AppComponent);
+  runApp(ng.AppComponentNgFactory);
 }

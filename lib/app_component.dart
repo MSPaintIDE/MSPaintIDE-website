@@ -73,7 +73,7 @@ class AppComponent implements OnInit {
   }
 
   void processData(data) {
-    var json = JSON.decode(data);
+    var json = jsonDecode(data);
 
     for (var quote in json['quotes'].toList()) {
       reviews.add(new Review(quote['quote'], quote['author'], quote['url']));

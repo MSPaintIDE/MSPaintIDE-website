@@ -1,4 +1,4 @@
-@import 'package:angular_components/css/material/material';
+//@import 'package:angular_components/css/material/material';
 @import 'package:angular_components/material_button/mixins';
 @import 'package:angular_components/material_expansionpanel/mixins';
 @import 'package:angular_components/material_yes_no_buttons/mixins';
@@ -25,7 +25,7 @@
   @include colorize("material-fab.blue", $mat-blue);
   @include colorize("material-fab.green", $mat-green);
   @include icon-button-color("material-button.blue-icon", $mat-blue);
-  @include raised-button($mat-blue);
+  @include raised-button("material-ripple", $mat-blue);
   @include raised-button('.raised-example');
 }
 
