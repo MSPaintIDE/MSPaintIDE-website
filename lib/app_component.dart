@@ -56,8 +56,10 @@ class AppComponent implements OnInit {
 
     if (darkTheme) {
       document.querySelector('html').classes.add('dark_body');
+      window.localStorage['dark'] = 'true';
     } else {
       document.querySelector('html').classes.remove('dark_body');
+      window.localStorage['dark'] = 'false';
     }
   }
 
@@ -75,6 +77,8 @@ class AppComponent implements OnInit {
   }
 
   void processData(data) {
+    if (window.localStorage.containsKey('dark') && window.localStorage['dark'] == 'true') toggleDarkTheme();
+
     var json = jsonDecode(data);
 
     for (var quote in json['quotes'].toList()) {
