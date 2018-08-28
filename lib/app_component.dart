@@ -34,10 +34,11 @@ import 'package:angular_components/theme/dark_theme.dart';
 )
 class AppComponent implements OnInit {
   var randomMessage;
-  List<Review> reviews = new List<Review>();
-  List<Review> activeReviews = new List<Review>();
-  List<InfoCardData> features = new List<InfoCardData>();
-  List<InfoCardData> advantages = new List<InfoCardData>();
+  List<String> screenshots = List<String>();
+  List<Review> reviews = List<Review>();
+  List<Review> activeReviews = List<Review>();
+  List<InfoCardData> features = List<InfoCardData>();
+  List<InfoCardData> advantages = List<InfoCardData>();
   var index = 1;
   bool movingUp = false;
   bool paused = false;
@@ -48,6 +49,7 @@ class AppComponent implements OnInit {
   String reviewInfoText = '';
   String reviewInfoAuthor = '';
   String reviewInfoUrl = '';
+  String bigScreenshot = '';
 
   void toggleDarkTheme() {
     darkTheme = !darkTheme;
@@ -88,6 +90,12 @@ class AppComponent implements OnInit {
     for (var advantage in json['advantages'].toList()) {
       advantages.add(new InfoCardData(advantage['title'], advantage['text']));
     }
+
+    for (var screenshot in json['screenshots'].toList()) {
+      screenshots.add(screenshot['url']);
+    }
+
+    bigScreenshot = screenshots[0];
 
     removePreloader();
 

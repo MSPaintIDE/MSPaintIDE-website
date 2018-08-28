@@ -7,6 +7,14 @@
                     <material-icon icon="home"></material-icon>
                     Home
                 </material-list-item>
+                <material-list-item (trigger)="routeTo('#about')" [class.dark]="darkTheme">
+                    <material-icon icon="feedback"></material-icon>
+                    About
+                </material-list-item>
+                <material-list-item (trigger)="routeTo('#screenshots')" [class.dark]="darkTheme">
+                    <material-icon icon="photo_camera"></material-icon>
+                    Screenshots
+                </material-list-item>
                 <material-list-item (trigger)="routeTo('#features')" [class.dark]="darkTheme">
                     <material-icon icon="explore"></material-icon>
                     Features
@@ -65,6 +73,12 @@
                 <a href="#">Home</a>
             </nav>
             <nav class="material-navigation">
+                <a href="#about">About</a>
+            </nav>
+            <nav class="material-navigation">
+                <a href="#screenshots">Screenshots</a>
+            </nav>
+            <nav class="material-navigation">
                 <a href="#features">Features</a>
             </nav>
             <nav class="material-navigation">
@@ -94,6 +108,22 @@
         <div class="laptop-container">
             <img src="laptop.png" class="laptop-image">
             <img src="ms-paint-screen.png" class="laptop-screen">
+        </div>
+    </div>
+
+    <h1 id="about" class="section-title">About The Program</h1>
+
+    <p class="about-desc">MS Paint IDE is a program that can read a normal image file saved with MS Paint, and can then translate it to text with the ability to highlight the text in the image, parse the code, compile and execute it. It provides a clean and simple interface, with your actual programming in a program you and millions of others already know how to use, and already have. MS Paint IDE allows the use of external libraries, multiple classes, and much much more.</p>
+
+    <h1 id="screenshots" class="section-title">Screenshots</h1>
+
+    <div class="big-screenshot">
+        <a href="{{bigScreenshot}}" target="_blank"><img src="{{bigScreenshot}}" alt="Big screenshot"/></a>
+    </div>
+
+    <div class="flex-container small-screenshots">
+        <div *ngFor="let screenshot of screenshots">
+            <img src="{{screenshot}}" alt="Small screenshot" (click)="bigScreenshot = screenshot">
         </div>
     </div>
 

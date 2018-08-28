@@ -4,12 +4,12 @@
 @import 'package:angular_components/material_yes_no_buttons/mixins';
 
 @mixin colorize($selector, $color) {
-  $raised: $selector + '[raised]';
-  @include button-background-color($raised, $color);
-  @include button-color($raised, $mat-white);
+    $raised: $selector + '[raised]';
+    @include button-background-color($raised, $color);
+    @include button-color($raised, $mat-white);
 
-  $not-raised: $selector + ':not([raised])';
-  @include button-color($not-raised, $color);
+    $not-raised: $selector + ':not([raised])';
+    @include button-color($not-raised, $color);
 }
 
 :host {
@@ -18,51 +18,51 @@
     padding: 0;
     margin: 0;
 
-  @include colorize("material-button.red", $mat-red);
-  @include colorize("material-button.blue", $mat-blue);
-  @include colorize("material-button.green", $mat-green);
-  @include colorize("material-fab.red", $mat-red);
-  @include colorize("material-fab.blue", $mat-blue);
-  @include colorize("material-fab.green", $mat-green);
-  @include icon-button-color("material-button.blue-icon", $mat-blue);
-  @include raised-button("material-ripple", $mat-blue);
-  @include raised-button('.raised-example');
+    @include colorize("material-button.red", $mat-red);
+    @include colorize("material-button.blue", $mat-blue);
+    @include colorize("material-button.green", $mat-green);
+    @include colorize("material-fab.red", $mat-red);
+    @include colorize("material-fab.blue", $mat-blue);
+    @include colorize("material-fab.green", $mat-green);
+    @include icon-button-color("material-button.blue-icon", $mat-blue);
+    //@include raised-button("material-ripple", $mat-blue);
+    @include raised-button('.raised-example');
 }
 
 $sidebar-color: $mat-grey-700;
 
 .dark:not(.theme-toggle):not(a):not(material-list) {
-  //@include expansionpanel-dark-theme;
-  @include expansionpanel-colors($mat-grey-700, $mat-white);
-  @include expansionpanel-focused-colors($mat-grey-800, $mat-white);
+    //@include expansionpanel-dark-theme;
+    @include expansionpanel-colors($mat-grey-700, $mat-white);
+    @include expansionpanel-focused-colors($mat-grey-800, $mat-white);
 
-  color: $mat-white;
-  background: $mat-grey-800;
+    color: $mat-white;
+    background: $mat-grey-800;
 }
 
 .dark.side-drawer {
-  //@include expansionpanel-dark-theme;
-  @include expansionpanel-colors($mat-grey-700, $mat-white);
-  @include expansionpanel-focused-colors($sidebar-color, $mat-white);
+    //@include expansionpanel-dark-theme;
+    @include expansionpanel-colors($mat-grey-700, $mat-white);
+    @include expansionpanel-focused-colors($sidebar-color, $mat-white);
 
-  color: $mat-white;
-  background: $sidebar-color;
+    color: $mat-white;
+    background: $sidebar-color;
 }
 
 .dark.side-drawer div { // mat-drawer-spacer
-  box-shadow: none !important;
-  border-color: $sidebar-color !important;
-  background-color: $sidebar-color !important;
+    box-shadow: none !important;
+    border-color: $sidebar-color !important;
+    background-color: $sidebar-color !important;
 }
 
 .dark.side-drawer material-list-item {
-  box-shadow: none !important;
-  border-color: $sidebar-color !important;
-  background-color: $sidebar-color !important;
+    box-shadow: none !important;
+    border-color: $sidebar-color !important;
+    background-color: $sidebar-color !important;
 }
 
 .dark.side-drawer material-list-item:hover {
-  background-color: $mat-grey-600 !important;
+    background-color: $mat-grey-600 !important;
 }
 
 .dark material-icon {
@@ -70,19 +70,19 @@ $sidebar-color: $mat-grey-700;
 }
 
 .dark p {
-  color: $mat-white;
+    color: $mat-white;
 }
 
 a.dark {
-  color: $mat-white !important;
+    color: $mat-white !important;
 }
 
 material-button.dark {
-  color: $mat-indigo-300;
+    color: $mat-indigo-300;
 }
 
 .theme-toggle .dark {
-  color: $mat-white;
+    color: $mat-white;
 }
 
 .theme-toggle {
@@ -115,7 +115,7 @@ material-drawer {
     font-size: 2.5em;
 }
 
-.section-title:not(:first-of-type) {
+.section-title {
     margin-top: 36px;
     padding-top: 64px;
 }
@@ -273,19 +273,52 @@ material-expansionpanel {
     transform: scale(1.05);
 }
 
-@media (max-width: 600px) {
+.big-screenshot {
+    padding: 0 !important;
+    margin-bottom: 50px;
+}
+
+.big-screenshot img {
+    width: 100%;
+}
+
+.small-screenshots div {
+    width: 300px;
+    height: 250px;
+    cursor: pointer;
+    margin: 0 20px !important;
+}
+
+.small-screenshots img {
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 800px) {
+    nav:nth-of-type(6) {
+        display: none;
+    }
+}
+
+@media (max-width: 720px) {
+    nav:nth-of-type(5) {
+        display: none;
+    }
+}
+
+@media (max-width: 560px) {
     nav:nth-of-type(4) {
         display: none;
     }
 }
 
-@media (max-width: 490px) {
+@media (max-width: 470px) {
     nav:nth-of-type(3) {
         display: none;
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 360px) {
     nav:nth-of-type(2) {
         display: none;
     }
@@ -309,6 +342,19 @@ material-expansionpanel {
     .laptop-holder {
         height: calc(50vw * 0.532490975);
     }
+
+    .big-screenshot {
+        width: 50%;
+        height: auto;
+        margin-left: 25%;
+        max-width: 1000px;
+    }
+
+    .about-desc {
+        width: 50%;
+        max-width: 1000px;
+        margin-left: 25%;
+    }
 }
 
 @media (min-width: 2001px) {
@@ -321,5 +367,17 @@ material-expansionpanel {
 
     .laptop-holder {
         height: 532.490975px;
+    }
+
+    .big-screenshot {
+        width: 1000px;
+        height: auto;
+        margin-left: calc(50% - 500px);
+        max-width: 1000px;
+    }
+
+    .about-desc {
+        width: 1000px;
+        margin-left: calc(50% - 500px);
     }
 }
