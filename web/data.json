@@ -225,6 +225,10 @@
       "text": "Top of the line parsing is just standard with MS Paint IDE, providing with sometimes a 99% accuracy reading and parsing your programs."
     },
     {
+      "title": "Git",
+      "text": "MS Paint IDE has all the essential Git features, including and limited to creating a git repository, adding a remote origin, adding files, and committing/pushing."
+    },
+    {
       "title": "Multiple Classes",
       "text": "Multiple class support, so you can make as advanced programs as you want."
     },
@@ -257,6 +261,10 @@
     {
       "title": "Share Code Easily",
       "text": "Code sharing is easy, as your code is just an image."
+    },
+    {
+      "title": "Predictable",
+      "text": "Everything you see initially in MS Paint IDE is what you get, there's no popup dialogs trying to scare you, different tabs, etc."
     },
     {
       "title": "Superiority",
