@@ -122,8 +122,8 @@
     </div>
 
     <div class="flex-container small-screenshots">
-        <div *ngFor="let screenshot of screenshots">
-            <img src="{{screenshot}}" alt="Small screenshot" (click)="bigScreenshot = screenshot">
+        <div *ngFor="let screenshot of activeScreenshots">
+            <img src="{{screenshot}}" alt="Small screenshot" (click)="bigScreenshot = screenshot"/>
         </div>
     </div>
 

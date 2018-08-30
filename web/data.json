@@ -273,28 +273,36 @@
   ],
   "screenshots": [
     {
-      "url": "images/screenshot-1.png"
+      "dark": "images/screenshot-1-dark.png",
+      "light": "images/screenshot-1-light.png"
     },
     {
-      "url": "images/screenshot-2.png"
+      "dark": "images/screenshot-2-dark.png",
+      "light": "images/screenshot-2-light.png"
     },
     {
-      "url": "images/screenshot-3.png"
+      "dark": "images/screenshot-3-dark.png",
+      "light": "images/screenshot-3-light.png"
     },
     {
-      "url": "images/screenshot-4.png"
+      "dark": "images/screenshot-4-dark.png",
+      "light": "images/screenshot-4-light.png"
     },
     {
-      "url": "images/screenshot-5.png"
+      "dark": "images/screenshot-5.png",
+      "light": "images/screenshot-5.png"
     },
     {
-      "url": "images/screenshot-6.png"
+      "dark": "images/screenshot-6.png",
+      "light": "images/screenshot-6.png"
     },
     {
-      "url": "images/screenshot-7.png"
+      "dark": "images/screenshot-7.png",
+      "light": "images/screenshot-7.png"
     },
     {
-      "url": "images/screenshot-8.png"
+      "dark": "images/screenshot-8.png",
+      "light": "images/screenshot-8.png"
     }
   ]
 }

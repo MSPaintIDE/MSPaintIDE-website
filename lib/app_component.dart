@@ -34,7 +34,8 @@ import 'package:angular_components/theme/dark_theme.dart';
 )
 class AppComponent implements OnInit {
   var randomMessage;
-  List<String> screenshots = List<String>();
+  List<String> activeScreenshots = List<String>();
+  List screenshots = List();
   List<Review> reviews = List<Review>();
   List<Review> activeReviews = List<Review>();
   List<InfoCardData> features = List<InfoCardData>();
@@ -53,6 +54,8 @@ class AppComponent implements OnInit {
 
   void toggleDarkTheme() {
     darkTheme = !darkTheme;
+    assignActiveScreenshots();
+    bigScreenshot = darkTheme ? getDarkScreenshot(bigScreenshot) : getLightScreenshot(bigScreenshot);
 
     if (darkTheme) {
       document.querySelector('html').classes.add('dark_body');
@@ -77,7 +80,11 @@ class AppComponent implements OnInit {
   }
 
   void processData(data) {
-    if (window.localStorage.containsKey('dark') && window.localStorage['dark'] == 'true') toggleDarkTheme();
+    if (window.localStorage.containsKey('dark') && window.localStorage['dark'] == 'true') {
+      new Future.delayed(const Duration(milliseconds: 500), () {
+        toggleDarkTheme();
+      });
+    }
 
     var json = jsonDecode(data);
 
@@ -96,14 +103,31 @@ class AppComponent implements OnInit {
     }
 
     for (var screenshot in json['screenshots'].toList()) {
-      screenshots.add(screenshot['url']);
+      screenshots.add({
+        "dark": screenshot['dark'],
+        "light": screenshot['light']
+      });
     }
 
-    bigScreenshot = screenshots[0];
+    assignActiveScreenshots();
+
+    bigScreenshot = activeScreenshots[0];
 
     removePreloader();
 
     startReviewCycle();
+  }
+
+  void assignActiveScreenshots() {
+    activeScreenshots = darkTheme ? screenshots.map((screenshot) => "${screenshot['dark']}").toList() : screenshots.map((screenshot) => "${screenshot['light']}").toList();
+  }
+
+  String getLightScreenshot(String darkScreenshot) {
+    return screenshots.firstWhere((screenshot) => screenshot['dark'] == darkScreenshot)['light'] ?? darkScreenshot;
+  }
+
+  String getDarkScreenshot(String lightScreenshot) {
+    return screenshots.firstWhere((screenshot) => screenshot['light'] == lightScreenshot)['dark'] ?? lightScreenshot;
   }
 
   void showReviewInfoDialog(Review review) {
@@ -169,7 +193,18 @@ class AppComponent implements OnInit {
 
   @override
   ngOnInit() {
-    getData().then(processData);
+//    print("111");
+//    new Future.delayed(const Duration(seconds: 5), () {
+//      print("222");
+      getData().then((data) {
+        processData(data);
+      });
+//      print("333");
+
+//    });
+
+//    new Future.delayed(const Duration(seconds: 5), () {
+
   }
 
   void startReviewCycle() {
