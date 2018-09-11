@@ -31,7 +31,7 @@
 
 $sidebar-color: $mat-grey-700;
 
-.dark:not(.theme-toggle):not(a):not(material-list) {
+.dark:not(.theme-toggle):not(a):not(material-list):not(.share-list) {
     //@include expansionpanel-dark-theme;
     @include expansionpanel-colors($mat-grey-700, $mat-white);
     @include expansionpanel-focused-colors($mat-grey-800, $mat-white);
@@ -50,14 +50,14 @@ $sidebar-color: $mat-grey-700;
 }
 
 .dark.side-drawer div { // mat-drawer-spacer
-    box-shadow: none !important;
-    border-color: $sidebar-color !important;
+    box-shadow: inset 0 8px 0 0 $sidebar-color !important;
+    border-color: #8c8c8c !important;
     background-color: $sidebar-color !important;
 }
 
 .dark.side-drawer material-list-item {
-    box-shadow: none !important;
-    border-color: $sidebar-color !important;
+    box-shadow: inset 0 8px 0 0 $sidebar-color !important;
+    border-color: #8c8c8c !important;
     background-color: $sidebar-color !important;
 }
 

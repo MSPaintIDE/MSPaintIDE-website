@@ -45,6 +45,7 @@ class AppComponent implements OnInit {
   bool paused = false;
   bool showReviewInfo = false;
   bool showShare = false;
+  bool showContact = false;
   bool showAllReviews = false;
   bool darkTheme = false;
   String reviewInfoText = '';

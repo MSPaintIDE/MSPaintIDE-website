@@ -44,7 +44,7 @@
                 </material-list-item>
             </div>
 
-            <material-list-item (trigger)="routeTo('mailto:inbox@rubbaboy.me')" [class.dark]="darkTheme">
+            <material-list-item (trigger)="showContact = true" [class.dark]="darkTheme">
                 <material-icon icon="email"></material-icon>
                 Contact
             </material-list-item>
@@ -213,6 +213,23 @@
 
             <div footer>
                 <material-button clear-size (trigger)="showShare = false" [class.dark]="darkTheme">Close</material-button>
+            </div>
+        </material-dialog>
+    </modal>
+
+    <modal [visible]="showContact">
+        <material-dialog class="basic-dialog contact-me" [autoDismissable]="true" (dismiss)="showContact = false" [class.dark]="darkTheme">
+            <p class="review-info-message">
+                You can contact me (<a href="https://rubbaboy.me/">RubbaBoy</a>) through the following platforms:
+
+                <p>Discord (RubbaBoy#2832)</p>
+                <a href="https://www.reddit.com/message/compose/?to=OnlyTwo_jpg">Reddit</a><br>
+                <a href="https://twitter.com/RubbaBoy">Twitter</a><br>
+                <a href="mailto:inbox@rubbaboy.me">Email</a>
+            </p>
+
+            <div footer>
+                <material-button clear-size (trigger)="showContact = false" [class.dark]="darkTheme">Close</material-button>
             </div>
         </material-dialog>
     </modal>

@@ -39,11 +39,38 @@ h1, h2, h3, h4, h5, h6, material-button .content {
     background-color: var(--sidebar-color-hover) !important; /* $mat-grey-600 */
 }
 
-material-expansionpanel.dark header:hover, material-expansionpanel.dark header:focus {
+material-expansionpanel.dark header:not(.header):hover, material-expansionpanel.dark header:not(.header):focus {
     background-color: var(--sidebar-color-hover) !important; /* $mat-grey-600 */
 }
 
-.more-reviews-container .panel header {
+.share-list > .panel > header > .header {
+    background-color: transparent !important;
+}
+
+.contact-me p {
+    margin-bottom: 0;
+}
+
+.contact-me a, .contact-me a:visited {
+    color: #000;
+    font-size: 18px;
+    text-decoration: none;
+    border-bottom: 1px #424242 dotted;
+
+    display: inline-block;
+    margin-top: 18px;
+}
+
+.dark_body .contact-me a, .dark_body .contact-me a:visited {
+    color: #fff;
+    border-bottom: 1px white dotted;
+}
+
+.contact-me a:hover {
+    border: none;
+}
+
+.more-reviews-container .panel header, .share-list .panel header {
     display: block !important;
 }
 
