@@ -43,6 +43,10 @@ material-expansionpanel.dark header:not(.header):hover, material-expansionpanel.
     background-color: var(--sidebar-color-hover) !important; /* $mat-grey-600 */
 }
 
+.dark:not(.theme-toggle):not(a):not(material-list):not(.share-list) > .open > header:hover {
+    background: #616161 !important;
+}
+
 .share-list > .panel > header > .header {
     background-color: transparent !important;
 }

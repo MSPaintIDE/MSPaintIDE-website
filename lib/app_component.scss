@@ -34,7 +34,7 @@ $sidebar-color: $mat-grey-700;
 .dark:not(.theme-toggle):not(a):not(material-list):not(.share-list) {
     //@include expansionpanel-dark-theme;
     @include expansionpanel-colors($mat-grey-700, $mat-white);
-    @include expansionpanel-focused-colors($mat-grey-800, $mat-white);
+    @include expansionpanel-focused-colors(var(--sidebar-color-hover), $mat-white);
 
     color: $mat-white;
     background: $mat-grey-800;
@@ -302,6 +302,45 @@ material-expansionpanel {
 .small-screenshots img {
     width: 100%;
     height: auto;
+}
+
+.as-seen-on {
+    width: 100%;
+    padding: 10px 0 28px !important;
+    height: 50px;
+    background-color: #3f51b5;
+    vertical-align: middle;
+    text-align: center;
+
+    @include shadow-elevation(3);
+
+    $size: 18px;
+    $logo-padding: 10vw;
+    span {
+        width: 100%;
+        float: left;
+        font-size: $size;
+        line-height: $size;
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        color: white;
+    }
+
+    .logos {
+        width: calc(100% - #{$logo-padding});
+        margin-left: $logo-padding / 2;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    a, img {
+        height: 100%;
+    }
+
+    a:hover img {
+        opacity: 0.7;
+    }
 }
 
 @media (max-width: 800px) {
