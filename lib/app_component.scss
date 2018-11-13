@@ -304,38 +304,40 @@ material-expansionpanel {
     height: auto;
 }
 
+
+$bar-height: 50px;
+$image-height: 50px;
+$padding: 30px;
+$size: 24px;
+
 .as-seen-on {
-    width: 100%;
-    padding: 10px 0 28px !important;
-    height: 50px;
-    background-color: #3f51b5;
     vertical-align: middle;
     text-align: center;
+    background-color: #3f51b5;
+    height: 100px;
+    padding: $padding 0 $padding + 10px !important;
 
     @include shadow-elevation(3);
 
-    $size: 18px;
-    $logo-padding: 10vw;
-    span {
+    .seen-text {
         width: 100%;
-        float: left;
         font-size: $size;
         line-height: $size;
         font-family: Roboto, Helvetica, Arial, sans-serif;
-        font-weight: 400;
-        color: white;
+        font-weight: 500;
+        color: white; // 6
+        margin-bottom: $size * 1.5;
     }
 
     .logos {
-        width: calc(100% - #{$logo-padding});
-        margin-left: $logo-padding / 2;
-        height: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
+        height: $image-height;
+        margin: 0 auto;
     }
 
     a, img {
-        height: 100%;
+        height: $image-height;
     }
 
     a:hover img {
@@ -388,6 +390,11 @@ material-expansionpanel {
         right: 25%;
     }
 
+    .as-seen-on .logos {
+        width: 50%;
+        max-width: 1000px;
+    }
+
     .laptop-holder {
         height: calc(50vw * 0.532490975);
     }
@@ -417,6 +424,11 @@ material-expansionpanel {
     .laptop-screen {
         position: absolute;
         height: auto;
+        width: 1000px;
+        right: calc(50% - 500px);
+    }
+
+    .as-seen-on .logos {
         width: 1000px;
         right: calc(50% - 500px);
     }
