@@ -4,6 +4,8 @@ version: 0.0.1
 #homepage: https://www.example.com
 #author: RubbaBoy <email@example.com>
 
+# pub run build_runner serve
+
 environment:
   sdk: '>=2.0.0 <3.0.0'
 
