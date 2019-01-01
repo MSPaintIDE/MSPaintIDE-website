@@ -352,8 +352,9 @@ $size: 24px;
     left: 25px;
     bottom: -100px;
     z-index: 9999;
+    background: transparent;
 
-    animation-delay: 1500ms;
+    animation-delay: 750ms;
     animation-name: discord-popup;
     animation-duration: 750ms;
     animation-timing-function: cubic-bezier(0,1.78,.94,.46);
@@ -366,6 +367,10 @@ $size: 24px;
         position: absolute;
         cursor: pointer;
         user-select: none;
+
+        .dark > & {
+            color: white;
+        }
     }
 
     &.disappear {

@@ -48,7 +48,7 @@ class AppComponent implements OnInit {
   bool showContact = false;
   bool showAllReviews = false;
   bool darkTheme = false;
-  bool showingDiscord = true;
+  bool showingDiscord = false;
   String reviewInfoText = '';
   String reviewInfoAuthor = '';
   String reviewInfoUrl = '';
@@ -186,6 +186,7 @@ class AppComponent implements OnInit {
 
         new Future.delayed(const Duration(seconds: 1), () {
           querySelector('#preloader-wrapper').remove();
+          showingDiscord = true;
         });
       } else {
         removePreloader();
