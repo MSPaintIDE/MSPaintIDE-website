@@ -48,6 +48,7 @@ class AppComponent implements OnInit {
   bool showContact = false;
   bool showAllReviews = false;
   bool darkTheme = false;
+  bool showingDiscord = true;
   String reviewInfoText = '';
   String reviewInfoAuthor = '';
   String reviewInfoUrl = '';

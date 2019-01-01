@@ -345,6 +345,58 @@ $size: 24px;
     }
 }
 
+.discord-popup {
+    width: 75px;
+    height: 75px;
+    position: fixed;
+    left: 25px;
+    bottom: -100px;
+    z-index: 9999;
+
+    animation-delay: 1500ms;
+    animation-name: discord-popup;
+    animation-duration: 750ms;
+    animation-timing-function: cubic-bezier(0,1.78,.94,.46);
+    animation-fill-mode: forwards;
+
+    user-select: none;
+
+    .close {
+        transform: translate(60px, -15px);
+        position: absolute;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    &.disappear {
+        bottom: 25px;
+        animation-name: discord-close;
+        animation-delay: 0ms;
+        animation-duration: 500ms;
+        animation-timing-function: ease-out;
+    }
+}
+
+@keyframes discord-close {
+    0% {
+        bottom: 25px;
+    }
+
+    100% {
+        bottom: -100px;
+    }
+}
+
+@keyframes discord-popup {
+    0% {
+        bottom: -100px;
+    }
+
+    100% {
+        bottom: 25px;
+    }
+}
+
 @media (max-width: 800px) {
     nav:nth-of-type(6) {
         display: none;

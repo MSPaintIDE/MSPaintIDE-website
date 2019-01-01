@@ -61,6 +61,10 @@
         </div>
     </material-list>
 </material-drawer>
+<div class="discord-popup" [class.disappear]="!showingDiscord">
+    <material-icon icon="close" class="close" (click)="showingDiscord = false"></material-icon>
+    <a href="https://discord.gg/RXmPkPJ" title="Click to join our official Discord!"><img src="images/logos/Discord-Logo-Color.svg" alt="Join our Discord server"></a>
+</div>
 <div class="material-content" [class.dark]="darkTheme">
     <header class="material-header shadow">
         <div class="material-header-row">
