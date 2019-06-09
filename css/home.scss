@@ -1,0 +1,53 @@
+@import "../bootstrap/scss/functions";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+
+.main-center {
+
+  .logo {
+    height: auto;
+    margin-top: 25vh !important;
+  }
+
+  .main-header {
+    font-family: 'Roboto', serif;
+    font-size: 72px;
+    color: #FFF;
+  }
+
+  .button-container {
+    display: flex;
+    margin: 45px 10px 10px 10px;
+
+    @include media-breakpoint-up(xs) {
+      .btn {
+        width: 400px;
+      }
+    }
+
+    @include media-breakpoint-down(xs) {
+      .btn {
+        width: calc(100vw - 60px);
+      }
+      flex-direction: column;
+    }
+
+    @include media-breakpoint-up(sm) {
+      .btn {
+        width: 300px;
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      .btn {
+        width: 200px;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      .btn {
+        width: 200px;
+      }
+    }
+  }
+}
