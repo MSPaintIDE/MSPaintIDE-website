@@ -2,6 +2,11 @@ body {
   background: #1B1C1D;
 }
 
+hr {
+  border-color: #FFF;
+}
+
+@import 'typography';
 @import 'components';
 @import 'navbar';
 @import 'home';

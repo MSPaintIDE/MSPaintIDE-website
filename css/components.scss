@@ -1,3 +1,5 @@
+// Button
+
 .btn-black-outline {
   border: 2px solid #FFFFFF;
   box-sizing: border-box;
@@ -9,4 +11,61 @@
   margin: 10px;
   text-align: center;
   color: #FFFFFF !important;
+}
+
+// Right Arrow Button Modifier
+
+.btn-black-outline.right-arrow {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.right-arrow::after {
+  font-family: 'Font Awesome 5 Pro', serif;
+  content: '\f054';
+  font-weight: 900;
+
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+
+  padding-left: 10px;
+}
+
+
+// Default Section
+.default-section {
+  .section-content {
+    margin: 0 2em;
+  }
+}
+
+.top-section-padding {
+  padding-top: 50px;
+}
+
+
+// Info Card
+.even-card-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-flow: row wrap;
+  padding: 0 !important;
+}
+
+.info-card {
+  border: 2px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 5px;
+
+  padding: 20px;
+  margin-bottom: 25px;
+
+  width: 400px;
+  max-width: 100%;
+
+  .btn-black-outline {
+    margin: 0;
+  }
 }
