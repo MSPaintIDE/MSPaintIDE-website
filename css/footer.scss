@@ -1,0 +1,93 @@
+.footer {
+  background: #28292A;
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+
+  .footer-contents {
+    //background: red;
+    display: inline-flex;
+    justify-content: center;
+    max-width: 1200px;
+    padding: 25px 0;
+
+    .left-column {
+      width: 30%;
+      display: flex;
+      //align-items: start;
+      //flex-direction: row;
+
+      .footer-logo {
+        width: 75px;
+        height: 75px;
+        margin-right: 15px;
+      }
+
+      .footer-text {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+
+        .big-name {
+          font-family: 'Roboto', serif;
+          font-size: 36px;
+          line-height: 42px;
+          white-space: nowrap;
+        }
+
+        .copyright {
+          font-size: 18px;
+          line-height: 32px;
+        }
+
+        .social-links {
+          font-family: 'Font Awesome 5 Brands', serif;
+          font-size: 24px;
+          line-height: 28px;
+        }
+      }
+    }
+
+    .links {
+      width: 50%;
+      display: flex;
+      align-items: start;
+      flex-direction: row;
+
+      .link-group {
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        margin: 0 20px;
+        white-space: nowrap;
+
+        //font-size: 20px;
+        //line-height: 30px;
+
+        .link-header {
+          font-weight: bold;
+          font-size: 20px;
+          line-height: 28px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1201px) {
+    width: 100%;
+
+    .footer-contents {
+      width: 100%;
+      display: inline-block;
+
+      .left-column {
+        width: 50%;
+        padding-bottom: 20px;
+      }
+
+      .left-column, .links {
+        margin: 0 auto;
+      }
+    }
+  }
+}

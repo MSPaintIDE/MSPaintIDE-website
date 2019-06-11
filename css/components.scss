@@ -11,6 +11,11 @@
   margin: 10px;
   text-align: center;
   color: #FFFFFF !important;
+
+  transition: all ease 500ms;
+  &:hover {
+    transform: translateY(-3px);
+  }
 }
 
 // Right Arrow Button Modifier
@@ -64,6 +69,11 @@
 
   width: 400px;
   max-width: 100%;
+
+  transition: all ease 500ms;
+  &:hover {
+    transform: translateY(-3px);
+  }
 
   .btn-black-outline {
     margin: 0;
