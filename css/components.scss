@@ -61,7 +61,7 @@
 .even-card-container {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   flex-flow: row wrap;
   padding: 0 !important;
 }
@@ -90,4 +90,68 @@
 // Large Section parent
 .first-container {
   padding-top: 140px;
+}
+
+// Press Card
+
+.press-card-container {
+  max-width: 950px;
+  width: 100%;
+  margin: 0 auto;
+
+  // 1350px and under (2 columns)
+  @media (max-width: 1350px) {
+    max-width: 625px;
+  }
+
+  // 775px and under (1 column)
+  @media (max-width: 775px) {
+    justify-content: space-around;
+  }
+}
+
+.press-card {
+  border: 2px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 5px;
+
+  padding: 20px;
+  margin-bottom: 25px;
+
+  width: 300px;
+  max-width: 100%;
+
+  transition: all ease 500ms;
+  &:hover {
+    transform: translateY(-3px);
+  }
+
+  .press-logo {
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    float: right;
+  }
+
+  .press-card-text {
+    display: inline-block;
+    margin: 10px 0;
+
+    .press-name {
+      font-size: 24px;
+      line-height: 28px;
+
+      display: block;
+    }
+
+    .press-date {
+      display: inline-block;
+      font-family: 'Roboto', serif;
+
+      font-size: 18px;
+      line-height: 22px;
+
+      color: #DCDCDC;
+    }
+  }
 }

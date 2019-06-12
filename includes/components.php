@@ -14,3 +14,40 @@ function createInfoCards($dataArray) {
         <?php
     }
 }
+
+function createHistoryBoxes($dataArray) {
+    foreach ($dataArray as $data) {
+        createHistoryBox($data[0], $data[1], $data[2]);
+    }
+}
+
+function createHistoryBox($title, $date, $text) {
+    ?>
+
+    <div class="history-card-wrapper">
+        <div class="history-card">
+            <span class="history-title"><?php echo $title ?></span>
+            <span class="history-date"><?php echo $date ?></span>
+            <p class="history-text"><?php echo $text ?></p>
+        </div>
+    </div>
+    <?php
+}
+
+function createPressCards($dataArray) {
+    foreach ($dataArray as $data) {
+        createPressCard($data[0], $data[1], $data[2], $data[3]);
+    }
+}
+
+function createPressCard($name, $date, $logo, $url) {
+    ?>
+    <a class="press-card" href="<?php echo $url ?>" target="_blank">
+        <div class="press-card-text">
+            <span class="press-name"><?php echo $name ?></span>
+            <span class="press-date"><?php echo $date ?></span>
+        </div>
+        <img class="press-logo" src="<?php echo $logo ?>" alt="<?php echo $name ?>'s logo"/>
+    </a>
+    <?php
+}

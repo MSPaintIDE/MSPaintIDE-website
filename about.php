@@ -1,7 +1,6 @@
 <?php
 include_once 'includes/default-section.php';
 include_once 'includes/components.php';
-include_once 'includes/history.php';
 ?>
 
 <!DOCTYPE html>
