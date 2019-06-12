@@ -49,6 +49,13 @@
   padding-top: 50px;
 }
 
+// Large Section
+.large-section h2 {
+  text-align: center;
+  font-size: 48px;
+  line-height: 56px;
+}
+
 
 // Info Card
 .even-card-container {
@@ -78,4 +85,9 @@
   .btn-black-outline {
     margin: 0;
   }
+}
+
+// Large Section parent
+.first-container {
+  padding-top: 140px;
 }

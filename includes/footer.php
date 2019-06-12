@@ -5,7 +5,11 @@
             <div class="footer-text">
                 <span class="big-name">MS Paint IDE</span>
                 <span class="copyright">© 2019 Adam Yarris</span>
-                <span class="social-links">  </span>
+                <ul class="social-links">
+                    <li><a></a></li>
+                    <li><a></a></li>
+                    <li><a></a></li>
+                </ul>
             </div>
         </div>
         <div class="links">

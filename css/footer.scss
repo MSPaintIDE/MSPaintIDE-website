@@ -1,8 +1,11 @@
+.content {
+  min-height: calc(100vh - 198px);
+}
+
 .footer {
   background: #28292A;
   width: 100%;
   text-align: center;
-  margin-top: 50px;
 
   .footer-contents {
     //background: red;
@@ -14,8 +17,6 @@
     .left-column {
       width: 30%;
       display: flex;
-      //align-items: start;
-      //flex-direction: row;
 
       .footer-logo {
         width: 75px;
@@ -41,9 +42,17 @@
         }
 
         .social-links {
-          font-family: 'Font Awesome 5 Brands', serif;
-          font-size: 24px;
-          line-height: 28px;
+          padding: 0;
+
+          li {
+            display: inline;
+            margin: 0 10px;
+            a {
+              font-family: 'Font Awesome 5 Brands', serif;
+              font-size: 24px;
+              line-height: 28px;
+            }
+          }
         }
       }
     }
@@ -72,8 +81,10 @@
       }
     }
   }
+}
 
-  @media screen and (max-width: 1201px) {
+@media screen and (max-width: 1201px) {
+  .footer {
     width: 100%;
 
     .footer-contents {
@@ -89,5 +100,9 @@
         margin: 0 auto;
       }
     }
+  }
+
+  .content {
+    min-height: calc(100vh - 338px);
   }
 }
