@@ -1,0 +1,47 @@
+.history-card-container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+
+  .history-card-wrapper {
+    &:first-of-type {
+      margin-top: 50px;
+    }
+
+    &:not(:last-of-type)::after {
+      height: 75px;
+      width: 0;
+      border: 2px solid #FFFFFF;
+      display: block;
+      content: '';
+      margin: 0 auto;
+    }
+
+    .history-card {
+      border: 2px solid #FFFFFF;
+      box-sizing: border-box;
+      border-radius: 5px;
+
+      padding: 20px;
+
+      .history-title {
+        font-family: 'Roboto', serif;
+        font-size: 24px;
+        line-height: 28px;
+      }
+
+      .history-date {
+        display: block;
+        font-size: 18px;
+        line-height: 22px;
+        margin: 7px 0 10px 0;
+
+        color: #DCDCDC;
+      }
+
+      .history-text {
+
+      }
+    }
+  }
+}

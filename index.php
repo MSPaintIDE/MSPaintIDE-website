@@ -8,7 +8,7 @@ include_once 'includes/components.php';
 <head>
     <?php
     include 'includes/head.php';
-    head('MS Paint IDE')
+    head('MS Paint IDE');
     ?>
 </head>
 <body id="page-top">

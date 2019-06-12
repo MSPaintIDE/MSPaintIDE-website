@@ -12,28 +12,26 @@
                 </ul>
             </div>
         </div>
-        <div class="links">
-            <div class="link-group organization">
-                <span class="link-header">Organization</span>
-                <a>About</a>
-                <a>Partners</a>
-                <a>Press</a>
-                <a>Stats</a>
-                <a>Logos</a>
-            </div>
-            <div class="link-group projects">
-                <span class="link-header">Projects</span>
-                <a>Overview</a>
-                <a>MS Paint IDE</a>
-                <a>NewOCR</a>
-                <a>PaintInjector</a>
-                <a>PaintAssist</a>
-            </div>
-            <div class="link-group projects">
-                <span class="link-header">Contact</span>
-                <a>Support</a>
-                <a>General Contact</a>
-            </div>
+        <div class="link-group organization">
+            <span class="link-header">Organization</span>
+            <a>About</a>
+            <a>Partners</a>
+            <a>Press</a>
+            <a>Stats</a>
+            <a>Logos</a>
+        </div>
+        <div class="link-group projects">
+            <span class="link-header">Projects</span>
+            <a>Overview</a>
+            <a>MS Paint IDE</a>
+            <a>NewOCR</a>
+            <a>PaintInjector</a>
+            <a>PaintAssist</a>
+        </div>
+        <div class="link-group projects">
+            <span class="link-header">Contact</span>
+            <a>Support</a>
+            <a>General Contact</a>
         </div>
     </div>
 </div>
