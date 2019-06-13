@@ -124,19 +124,21 @@ function createResourceCard($data) {
 
 function createProjectCards($dataArray) {
     foreach ($dataArray as $data) {
-        createProjectCard($data[0], $data[1], $data[2], $data[3], $data[4], isset($data[5]) ? $data[5] : false);
+        createProjectCard($data[0], $data[1], $data[2], $data[3], $data[4], $data[5]);
     }
 }
 
-function createProjectCard($name, $languages, $commits, $stars, $desc, $small_desc) {
+function createProjectCard($name, $languages, $commits, $stars, $desc, $url) {
     ?>
     <div class="info-card project-card">
-        <div class="left-section">
-            <h4 class="project-card-title"><?php echo $name ?></h4>
-            <span class="project-card-langs"><?php echo $languages ?></span>
-            <span class="project-card-data"><?php echo $commits ?><i class="fas fa-history"></i><?php echo $stars ?><i class="fas fa-star"></i></span>
-        </div>
-        <p class="project-card-desc"><?php echo $desc ?></p>
+        <a class="project-card-link" href="<?php echo $url ?>" target="_blank">
+            <div class="left-section">
+                <h4 class="project-card-title"><?php echo $name ?></h4>
+                <span class="project-card-langs"><?php echo $languages ?></span>
+                <span class="project-card-data"><?php echo $commits ?><i class="fas fa-history"></i><?php echo $stars ?><i class="fas fa-star"></i></span>
+            </div>
+            <p class="project-card-desc"><?php echo $desc ?></p>
+        </a>
     </div>
     <?php
 }

@@ -14,11 +14,40 @@ function head($title) {
         gtag('config', 'UA-84382008-3');
     </script>
 
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "MS Paint IDE",
+    "image": "https://ms-paint-i.de/logos/ms-paint-logo-colored.png",
+    "downloadUrl": "https://github.com/MSPaintIDE/MSPaintIDE/releases/latest",
+    "featureList": "Read your images from Paint and compile, execute, and highlight them",
+    "softwareVersion": "2.1.1",
+    "operatingSystem": "Windows",
+    "applicationCategory": "Software Development",
+    "copyrightYear": "2017",
+    "keywords": "MS Paint, MS Paint IDE, IDE, Java, RubbaBoy, Google Assistant",
+    "license": "https://github.com/MSPaintIDE/MSPaintIDE/blob/master/LICENSE.txt",
+    "copyrightHolder": {
+        "@type": "Person",
+        "name": "Adam Yarris"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Adam Yarris"
+    },
+    "sameAs": [
+        "https://github.com/MSPaintIDE",
+        "https://twitter.com/MSPaintIDE"
+    ]
+}
+    </script>
+
     <title><?php echo $title; ?></title>
     <meta charset="UTF-8">
     <meta name="description"
           content="Ditch IDEs like Intellij and glorified text editors like Eclipse, and switch to a real IDE, MS Paint.">
-    <meta name="keywords" content="MS Paint, MS Paint IDE, IDE, Java, Spigot, RubbaBoy">
+    <meta name="keywords" content="MS Paint, MS Paint IDE, IDE, Java, RubbaBoy, Google Assistant">
     <meta name="author" content="RubbaBoy">
     <meta name="theme-color" content="#1B1C1D">
     <meta name="msapplication-navbutton-color" content="#1B1C1D">
