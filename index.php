@@ -26,9 +26,9 @@ include_once 'includes/components.php';
 
         <div class="row justify-content-md-center">
             <div class="button-container d-flex justify-content-center col-xl-4 col-xl-5">
-                <a class="btn btn-black-outline" href="#">Demo</a>
-                <a class="btn btn-black-outline" href="#">Wiki</a>
-                <a class="btn btn-black-outline" href="#">Open Source</a>
+                <a class="btn btn-black-outline" href="https://youtu.be/eyH4aXlB1Js">Demo</a>
+                <a class="btn btn-black-outline" href="https://wiki.ms-paint-i.de/">Wiki</a>
+                <a class="btn btn-black-outline" href="https://github.com/MSPaintIDE">Open Source</a>
             </div>
         </div>
     </div>

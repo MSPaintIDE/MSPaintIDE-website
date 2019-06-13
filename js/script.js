@@ -16,6 +16,6 @@ window.onload = function() {
 function startAnimation() {
     setTimeout(function() {
         var preloaderImage = document.getElementsByClassName('logo')[0];
-        preloaderImage.contentDocument.getElementsByTagName('svg')[0].classList.add('preloader');
+        preloaderImage.contentDocument.getElementsByTagName('svg')[0].classList.add('animate');
     }, 500);
 }

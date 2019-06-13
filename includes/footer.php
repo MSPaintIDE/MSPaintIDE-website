@@ -6,32 +6,32 @@
                 <span class="big-name">MS Paint IDE</span>
                 <span class="copyright">© 2019 Adam Yarris</span>
                 <ul class="social-links">
-                    <li><a></a></li>
-                    <li><a></a></li>
-                    <li><a></a></li>
+                    <li><a href="https://www.youtube.com/channel/UC2K3flYNj0hLC2BfPCXfvEA"></a></li>
+                    <li><a href="https://github.com/MSPaintIDE"></a></li>
+                    <li><a href="https://twitter.com/MSPaintIDE"></a></li>
                 </ul>
             </div>
         </div>
         <div class="link-group organization">
             <span class="link-header">Organization</span>
-            <a>About</a>
-            <a>Partners</a>
-            <a>Press</a>
-            <a>Stats</a>
-            <a>Logos</a>
+            <a href="/about">About</a>
+            <a href="/partners">Partners</a>
+            <a href="/press">Press</a>
+            <a href="/stats">Stats</a>
+            <a href="/logos">Logos</a>
         </div>
         <div class="link-group projects">
             <span class="link-header">Projects</span>
-            <a>Overview</a>
-            <a>MS Paint IDE</a>
-            <a>NewOCR</a>
-            <a>PaintInjector</a>
-            <a>PaintAssist</a>
+            <a href="overview">Overview</a>
+            <a href="https://github.com/MSPaintIDE/MSPaintIDE">MS Paint IDE</a>
+            <a href="https://github.com/MSPaintIDE/NewOCR">NewOCR</a>
+            <a href="https://github.com/MSPaintIDE/PaintInjector">PaintInjector</a>
+            <a href="https://github.com/MSPaintIDE/PaintAssistant">PaintAssistant</a>
         </div>
         <div class="link-group projects">
             <span class="link-header">Contact</span>
-            <a>Support</a>
-            <a>General Contact</a>
+            <a href="mailto:support@ms-paint-i.de">Support</a>
+            <a href="mailto:contact@ms-paint-i.de">General Contact</a>
         </div>
     </div>
 </div>
