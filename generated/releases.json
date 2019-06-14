@@ -1,0 +1,186 @@
+[
+  {
+    "title": "Initial Release",
+    "version": "v1.0",
+    "description": "The initial release. The .zip archive contains the released jar, and all is needed to get it working is unzip the file, and configure the application's paths as shown in the screenshots.",
+    "commits": null,
+    "additions": 0,
+    "deletions": 0,
+    "date_diff": "-",
+    "downloads": [
+      {
+        "title": "Application",
+        "type": "ZIP",
+        "size": "25.41 MB",
+        "url": "https:\/\/github.com\/MSPaintIDE\/MSPaintIDE\/releases\/download\/v1.0\/MSPaintIDE-1.0-SNAPSHOT.zip"
+      },
+      {
+        "title": "Source",
+        "type": "ZIP",
+        "size": "104 KB",
+        "url": "https:\/\/api.github.com\/repos\/MSPaintIDE\/MSPaintIDE\/zipball\/v1.0"
+      }
+    ]
+  },
+  {
+    "title": "Library and Compile Support",
+    "version": "v1.1",
+    "description": "Added libraries, standalone .jar compilation, and \"probe\" mode, which makes image scans over 10x faster",
+    "commits": 2,
+    "additions": 641,
+    "deletions": 120,
+    "date_diff": 2,
+    "downloads": [
+      {
+        "title": "Application",
+        "type": "ZIP",
+        "size": "25.41 MB",
+        "url": "https:\/\/github.com\/MSPaintIDE\/MSPaintIDE\/releases\/download\/v1.1\/MSPaintIDE-1.1-SNAPSHOT.zip"
+      },
+      {
+        "title": "Source",
+        "type": "ZIP",
+        "size": "107 KB",
+        "url": "https:\/\/api.github.com\/repos\/MSPaintIDE\/MSPaintIDE\/zipball\/v1.1"
+      }
+    ]
+  },
+  {
+    "title": "Multi Class Support",
+    "version": "v1.2",
+    "description": "Added multiple class compilation support to create any application you want.",
+    "commits": 1,
+    "additions": 217,
+    "deletions": 87,
+    "date_diff": 1,
+    "downloads": [
+      {
+        "title": "Application",
+        "type": "ZIP",
+        "size": "25.44 MB",
+        "url": "https:\/\/github.com\/MSPaintIDE\/MSPaintIDE\/releases\/download\/v1.2\/MSPaintIDE-1.2-SNAPSHOT.zip"
+      },
+      {
+        "title": "Source",
+        "type": "ZIP",
+        "size": "109 KB",
+        "url": "https:\/\/api.github.com\/repos\/MSPaintIDE\/MSPaintIDE\/zipball\/v1.2"
+      }
+    ]
+  },
+  {
+    "title": "Complete GUI redesign",
+    "version": "v2.0",
+    "description": "The GUI has been completely redesigned, along with everything being much much much more efficient and faster.",
+    "commits": 23,
+    "additions": 1487,
+    "deletions": 810,
+    "date_diff": 122,
+    "downloads": [
+      {
+        "title": "Application",
+        "type": "JAR",
+        "size": "31.13 MB",
+        "url": "https:\/\/github.com\/MSPaintIDE\/MSPaintIDE\/releases\/download\/v2.0\/MSPaintIDE-2.0-SNAPSHOT.jar"
+      },
+      {
+        "title": "Source",
+        "type": "ZIP",
+        "size": "166 KB",
+        "url": "https:\/\/api.github.com\/repos\/MSPaintIDE\/MSPaintIDE\/zipball\/v2.0"
+      }
+    ]
+  },
+  {
+    "title": "Bug fix",
+    "version": "v2.0.1",
+    "description": "Fixed a reported bug.",
+    "commits": 2,
+    "additions": 11,
+    "deletions": 8,
+    "date_diff": 17,
+    "downloads": [
+      {
+        "title": "Application",
+        "type": "JAR",
+        "size": "31.13 MB",
+        "url": "https:\/\/github.com\/MSPaintIDE\/MSPaintIDE\/releases\/download\/v2.0.1\/MSPaintIDE-2.0.1-SNAPSHOT.jar"
+      },
+      {
+        "title": "Source",
+        "type": "ZIP",
+        "size": "167 KB",
+        "url": "https:\/\/api.github.com\/repos\/MSPaintIDE\/MSPaintIDE\/zipball\/v2.0.1"
+      }
+    ]
+  },
+  {
+    "title": "Dark theme",
+    "version": "v2.0.2",
+    "description": "Dark theme! Just click the droplet-thing icon to toggle themes.",
+    "commits": 4,
+    "additions": 116,
+    "deletions": 58,
+    "date_diff": 40,
+    "downloads": [
+      {
+        "title": "Application",
+        "type": "JAR",
+        "size": "31.13 MB",
+        "url": "https:\/\/github.com\/MSPaintIDE\/MSPaintIDE\/releases\/download\/v2.0.2\/MSPaintIDE-2.0.2-SNAPSHOT.jar"
+      },
+      {
+        "title": "Source",
+        "type": "ZIP",
+        "size": "168 KB",
+        "url": "https:\/\/api.github.com\/repos\/MSPaintIDE\/MSPaintIDE\/zipball\/v2.0.2"
+      }
+    ]
+  },
+  {
+    "title": "Git & Preformance updates",
+    "version": "v2.1.0",
+    "description": "Increased performance by ~33%, added git features such as:\r\n- Creating a repo\r\n- Adding files\r\n- Committing\r\n- Pushing\r\n- Adding remote origins\r\n\r\nAlso removed common leading spaces, making much cleaner files.",
+    "commits": 14,
+    "additions": 747,
+    "deletions": 215,
+    "date_diff": 79,
+    "downloads": [
+      {
+        "title": "Application",
+        "type": "JAR",
+        "size": "31.38 MB",
+        "url": "https:\/\/github.com\/MSPaintIDE\/MSPaintIDE\/releases\/download\/v2.1.0\/MSPaintIDE-2.1.0-SNAPSHOT.jar"
+      },
+      {
+        "title": "Source",
+        "type": "ZIP",
+        "size": "174 KB",
+        "url": "https:\/\/api.github.com\/repos\/MSPaintIDE\/MSPaintIDE\/zipball\/v2.1.0"
+      }
+    ]
+  },
+  {
+    "title": "Installation updates",
+    "version": "v2.1.1",
+    "description": "Several updates and fixes to the installation of the program, including a _much_ easier to use configuration. Each side of the program (Input controls and output) can scroll separately now and auto size for your monitor. While uninstalling, it now closes all instances of MS Paint IDE to stop uninstallation failure.",
+    "commits": 21,
+    "additions": 990,
+    "deletions": 548,
+    "date_diff": 10,
+    "downloads": [
+      {
+        "title": "Application",
+        "type": "JAR",
+        "size": "31.69 MB",
+        "url": "https:\/\/github.com\/MSPaintIDE\/MSPaintIDE\/releases\/download\/v2.1.1\/MSPaintIDE-2.1.1-SNAPSHOT.jar"
+      },
+      {
+        "title": "Source",
+        "type": "ZIP",
+        "size": "323 KB",
+        "url": "https:\/\/api.github.com\/repos\/MSPaintIDE\/MSPaintIDE\/zipball\/v2.1.1"
+      }
+    ]
+  }
+]

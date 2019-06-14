@@ -354,3 +354,140 @@
     }
   }
 }
+
+// Download Card
+.download-card-container {
+  display: flex;
+  flex-direction: column;
+
+  .download-card {
+    margin: 25px auto;
+    display: inline-block;
+    width: 900px;
+
+    &:first-of-type {
+      margin-top: 50px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 50px;
+    }
+
+    .download-card-link {
+      display: inline-block;
+
+      .left-section {
+        position: relative;
+
+        display: inline-block;
+        width: 150px;
+
+        .download-card-version {
+          margin-bottom: 5px;
+          display: inline-block;
+        }
+
+        .download-card-duration, .download-card-commits, .download-card-changes {
+          display: block;
+
+          font-size: 18px;
+          line-height: 25px;
+          margin-bottom: 3px;
+
+          &, i {
+            color: #DCDCDC;
+          }
+
+          i {
+            margin-left: 5px;
+          }
+
+          .adds {
+            color: #0F0 !important;
+          }
+
+          .subs {
+            color: #F00 !important;
+            margin-left: 10px;
+          }
+        }
+      }
+
+      .right-section {
+        display: block;
+        float: right;
+        margin-bottom: 0;
+
+        width: 700px;
+
+        .download-card-title {
+          width: 100%;
+          height: 100%;
+          margin-bottom: 10px;
+        }
+
+        .download-card-desc {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      @include media-breakpoint-down(md) {
+        .right-section {
+          margin-top: 15px;
+          display: block;
+
+          width: 100%;
+
+          .download-card-desc {
+
+          }
+        }
+      }
+    }
+
+
+    // Download Resource Card
+    .download-resource {
+      @extend .info-card;
+      width: unset;
+      height: 80px;
+      margin: 10px 0 0 25px;
+      display: inline-block;
+
+      &:nth-child(2) {
+        margin-left: 150px;
+      }
+
+      .download-resource-icon {
+        display: inline-block;
+        float: left;
+        font-size: 36px;
+        line-height: 41px;
+        color: #FFF;
+      }
+
+      .download-resource-data {
+        float: left;
+        display: block;
+        margin-left: 20px;
+        .download-resource-title {
+          font-family: 'Roboto', serif;
+          display: block;
+          font-size: 1.5rem;
+          font-weight: 500;
+          line-height: 1.2;
+          margin-top: 0;
+        }
+
+        .download-resource-info {
+          display: block;
+          font-size: 14px;
+          line-height: 17px;
+
+          color: #CDCDCD;
+        }
+      }
+    }
+  }
+}
