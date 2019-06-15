@@ -17,7 +17,7 @@ include_once 'includes/components.php';
 <div class="content">
     <div class="container-fluid main-center">
         <div class="row justify-content-md-center">
-            <object class="logo col-xl-3 col-lg-4" onload="startAnimation()" data="logos/ms-paint-logo-animated-white.svg" type="image/svg+xml"></object>
+            <object class="logo col-xl-3 col-lg-4" onload="startAnimation()" data="images/logos/ms-paint-logo-animated-white.svg" type="image/svg+xml"></object>
         </div>
 
         <div class="row justify-content-md-center">

@@ -1,7 +1,7 @@
 <div class="footer">
     <div class="footer-contents col-12 col-sm-12 col-md-10 col-lg-10 col-xl-8">
         <div class="left-column">
-            <img class="footer-logo" src="/logos/ms-paint-logo-colored.png" alt="Logo">
+            <img class="footer-logo" src="/images/logos/ms-paint-logo-colored.png" alt="Logo">
             <div class="footer-text">
                 <span class="big-name">MS Paint IDE</span>
                 <span class="copyright">© 2019 Adam Yarris</span>

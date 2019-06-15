@@ -25,44 +25,44 @@ include_once 'includes/components.php';
             createResourceCards([
                 [
                     'name' => 'Colored',
-                    'image' => '/logos/ms-paint-logo-colored.png',
+                    'image' => '/images/logos/ms-paint-logo-colored.png',
                     'downloads' => [
-                        'PNG' => '/logos/ms-paint-logo-colored.png',
-                        'SVG' => '/logos/ms-paint-logo-colored.svg'
+                        'PNG' => '/images/logos/ms-paint-logo-colored.png',
+                        'SVG' => '/images/logos/ms-paint-logo-colored.svg'
                     ]
                 ],
                 [
                     'name' => 'White',
-                    'image' => '/logos/ms-paint-logo-white.png',
+                    'image' => '/images/logos/ms-paint-logo-white.png',
                     'downloads' => [
-                        'PNG' => '/logos/ms-paint-logo-white.png',
-                        'SVG' => '/logos/ms-paint-logo-white.svg'
+                        'PNG' => '/images/logos/ms-paint-logo-white.png',
+                        'SVG' => '/images/logos/ms-paint-logo-white.svg'
                     ]
                 ],
                 [
                     'name' => 'Black',
-                    'image' => '/logos/ms-paint-logo.png',
+                    'image' => '/images/logos/ms-paint-logo.png',
                     'downloads' => [
-                        'PNG' => '/logos/ms-paint-logo.png',
-                        'SVG' => '/logos/ms-paint-logo.svg'
+                        'PNG' => '/images/logos/ms-paint-logo.png',
+                        'SVG' => '/images/logos/ms-paint-logo.svg'
                     ]
                 ],
                 [
                     'name' => 'Animated White',
-                    'image' => '/logos/ms-paint-logo-animated-white.svg',
+                    'image' => '/images/logos/ms-paint-logo-animated-white.svg',
                     'info' => 'SVG provides a single animation, where Toggleable requires the class \'animate\' to be added to the SVG content to activate the animation.',
                     'downloads' => [
-                        'SVG' => '/logos/ms-paint-logo-animated-white-immediate.svg',
-                        'Toggleable' => '/logos/ms-paint-logo-animated-white.svg'
+                        'SVG' => '/images/logos/ms-paint-logo-animated-white-immediate.svg',
+                        'Toggleable' => '/images/logos/ms-paint-logo-animated-white.svg'
                     ]
                 ],
                 [
                     'name' => 'Animated Black',
-                    'image' => '/logos/ms-paint-logo-animated-black.svg',
+                    'image' => '/images/logos/ms-paint-logo-animated-black.svg',
                     'info' => 'SVG provides a single animation, where Toggleable requires the class \'animate\' to be added to the SVG content to activate the animation.',
                     'downloads' => [
-                        'SVG' => '/logos/ms-paint-logo-animated-black-immediate.svg',
-                        'Toggleable' => '/logos/ms-paint-logo-animated-black.svg'
+                        'SVG' => '/images/logos/ms-paint-logo-animated-black-immediate.svg',
+                        'Toggleable' => '/images/logos/ms-paint-logo-animated-black.svg'
                     ]
                 ]
             ]);
