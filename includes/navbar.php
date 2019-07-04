@@ -11,12 +11,12 @@
                 foreach ([
                              'Home' => '',
                              'About' => 'about',
-                             'Features' => 'features',
-                             'Advantages' => 'advantages'
-                         ] as $display => $anchor) {
+                             'Projects' => 'overview',
+                             'Download' => 'downloads'
+                         ] as $display => $link) {
                     ?>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/#<?php echo $anchor; ?>"><?php echo $display; ?></a>
+                        <a class="nav-link js-scroll-trigger" href="/<?php echo $link; ?>"><?php echo $display; ?></a>
                     </li>
                     <?php
                 }

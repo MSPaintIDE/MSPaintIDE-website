@@ -10,3 +10,8 @@ h1, h2, h3, h4, h5, h6 {
 p, span, a {
   color: #FFF;
 }
+
+a:hover {
+  color: #8C8C8C;
+  text-decoration: unset;
+}

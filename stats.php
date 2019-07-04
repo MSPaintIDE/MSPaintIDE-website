@@ -19,7 +19,7 @@ include_once 'includes/components.php';
         <?php startSection('Stats', 'stats', 'large-section'); ?>
         <p>The organization contains several repos revolving around the IDE, most of which are being constantly worked on. More statistics are coming soon.</p>
         <?php
-        createStatsCard(490, 11, 590);
+        createStatsCard(577, 11, 601);
         endSection();
         ?>
     </div>

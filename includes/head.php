@@ -19,7 +19,7 @@ function head($title) {
     "@context": "http://schema.org",
     "@type": "SoftwareApplication",
     "name": "MS Paint IDE",
-    "image": "https://ms-paint-i.de/logos/ms-paint-logo-colored.png",
+    "image": "https://ms-paint-i.de/images/logos/ms-paint-logo-colored.png",
     "downloadUrl": "https://github.com/MSPaintIDE/MSPaintIDE/releases/latest",
     "featureList": "Read your images from Paint and compile, execute, and highlight them",
     "softwareVersion": "2.1.1",
@@ -55,11 +55,11 @@ function head($title) {
     <meta name="twitter:card" content="summary"/>
     <meta name="twitter:site" content="@MSPaintIDE"/>
     <meta name="twitter:creator" content="@MSPaintIDE"/>
-    <meta name="twitter:image" content="https://ms-paint-i.de/logos/ms-paint-logo-colored.png"/>
+    <meta name="twitter:image" content="https://ms-paint-i.de/images/logos/ms-paint-logo-colored.png"/>
     <meta property="og:title" content="MS Paint IDE">
     <meta property="og:description"
           content="Ditch IDEs like Intellij and glorified text editors like Eclipse, and switch to a real IDE, MS Paint.">
-    <meta property="og:image" content="https://ms-paint-i.de/logos/ms-paint-logo-colored.png">
+    <meta property="og:image" content="https://ms-paint-i.de/images/logos/ms-paint-logo-colored.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
