@@ -1,0 +1,11 @@
+/.idea
+/bootstrap
+*.iml
+*.css*
+css/.sass-cache
+first.patch
+
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata

@@ -1,0 +1,19 @@
+@import "./layout";
+
+// layout.scss:18
+.side-bar {
+    @include mq(md) {
+        border: none;
+    }
+}
+
+
+// layout.scss:81
+.page-header {
+    .main-content {
+        z-index: 9999;
+        @include mq(md) {
+            border: none;
+        }
+    }
+}

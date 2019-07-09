@@ -1,0 +1,8 @@
+@import "./navigation";
+
+// override_navigation.scss:5
+.site-title {
+    @include mq(md) {
+        border: none;
+    }
+}

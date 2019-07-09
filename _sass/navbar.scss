@@ -1,0 +1,37 @@
+.navbar {
+  height: 95px;
+  font-family: 'Montserrat', serif;
+  color: #FFF;
+
+  .navbar-toggler {
+    color: #FFF;
+    border-color: rgba(255, 255, 255, .1);
+  }
+
+  .navbar-brand {
+    margin: 10px;
+    padding: 0;
+    img {
+      width: 75px;
+      height: 75px;
+    }
+  }
+
+  .container {
+    max-width: unset;
+    padding: 0;
+
+    .navbar-nav {
+      padding-right: 95px;
+    }
+  }
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #FFF;
+  font-size: 24px;
+
+  &:hover {
+    color: darken(white, 20);
+  }
+}

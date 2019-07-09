@@ -1,0 +1,46 @@
+@import "./buttons";
+
+//
+// Buttons and things that look like buttons
+//
+// stylelint-disable color-named
+
+// buttons.scss:6
+.btn {
+  border: 2px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 10px;
+
+  font-family: 'Roboto', serif;
+  font-size: 18px;
+  line-height: 21px;
+  margin: 10px;
+  text-align: center;
+  color: #FFFFFF !important;
+  background-color: unset !important;
+
+  transition: all ease 500ms;
+  &:hover {
+    transform: translateY(-3px);
+  }
+}
+
+.btn-outline {
+
+}
+
+.btn-primary {
+  @include btn-color($white, $btn-primary-color);
+}
+
+.btn-purple {
+  @include btn-color($white, $purple-100);
+}
+
+.btn-blue {
+  @include btn-color($white, $blue-000);
+}
+
+.btn-green {
+  @include btn-color($white, $green-100);
+}

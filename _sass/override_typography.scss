@@ -1,0 +1,21 @@
+@import "./typography";
+
+//
+// Typography
+//
+// stylelint-disable primer/selector-no-utility, selector-no-type, selector-max-type
+
+// Originally from base.scss but this adds more typography class stuff
+a:not([class]) {
+  text-decoration: none;
+  background-image: none;
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-size: 1px 1px;
+
+  &:hover {
+    background-image: linear-gradient(rgba($link-color, 0.45) 0%, rgba($link-color, 0.45) 100%);
+    background-size: 1px 1px;
+
+  }
+}

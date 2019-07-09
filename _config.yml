@@ -1,0 +1,20 @@
+remote_theme: pmarsceill/just-the-docs
+theme: just-the-docs
+color_scheme: "dark"
+exclude:
+  - bootstrap
+
+# Enable or disable the site search
+search_enabled: true
+
+title: "MS Paint IDE Wiki"
+
+# Aux links for the upper right navigation
+aux_links:
+  "NewOCR on GitHub":
+    - "//github.com/MSPaintIDE/MSPaintIDE"
+
+permalink: pretty
+
+sass:
+  sass_dir: _sass

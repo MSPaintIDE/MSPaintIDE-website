@@ -1,0 +1,28 @@
+---
+# Tbh I don't know what the hell I'm doing here, this is not how you're
+# suppose to be customising stuff but I don't really care at this point.
+---
+
+@import "./vendor/normalize.scss/normalize.scss";
+
+@import "./support/support";
+
+//@import "./color_schemes/dark.scss";
+@import "./custom/custom";
+
+// Modules
+@import "./base";
+@import "./override_layout";
+@import "./content";
+@import "./override_navigation";
+@import "./override_typography";
+@import "./labels";
+@import "./override_buttons";
+@import "./search";
+@import "./tables";
+@import "./code";
+@import "./utilities/utilities";
+
+
+// Custom for the MS Paint IDE Wiki
+@import "./navbar";
