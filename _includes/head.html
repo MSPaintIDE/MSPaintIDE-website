@@ -41,6 +41,24 @@
 }
     </script>
 
+    <script>
+        window.onload = function() {
+            let headers = collectTags(["h1", "h2", "h3"]);
+            console.log(headers);
+            headers.forEach(header => {
+                 header.innerHTML = `<a href="#${header.id}">${header.innerHTML}</a>`;
+            });
+        };
+
+        function collectTags(tags) {
+            let elements = [];
+            for (let i = 0; i < tags.length; i++) {
+                elements.push(Array.prototype.slice.call(document.getElementsByTagName(tags[i])));
+            }
+            return elements.flat();
+        }
+    </script>
+
     <title>{{ page.title }} - {{ site.title }}</title>
     <meta charset="UTF-8">
 
