@@ -1,39 +1,23 @@
 ---
 layout: default
 title: Home
-description: A wiki with examples/tutorials for NewOCR, a pure Java OCR without machine learning.
+description: A place to learn how to use and develop with MS Paint IDE.
 nav_order: 1
 permalink: /
 github-path: index.md
 ---
 
-# Navigation Structure
+# MS Paint IDE Wiki
 {: .fs-9 }
-
-NewOCR is an OCR made in Java without the use of machine learning, making it easy to use and contribute to.
-
-[View it on GitHub](https://github.com/MSPaintIDE/NewOCR){: .btn .fs-5 .mb-4 .mb-md-0 }
-[View Docs](https://docs.newocr.dev/){: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 
-## Getting started
+Despite the simplicity of Paint, MS Paint IDE is a fairly complex IDE with many features and configuration options. This wiki's primary purpose is to give as much information as possible about the IDE to ease the learning curve of using such a modern IDE such as this.
 
-NewOCR can either download the latest jar from [GitHub](https://github.com/MSPaintIDE/NewOCR/releases), or by using Gradle or Maven (The latter two being preferred).
+The following are some links to help provide more specific guidance.
 
-### Gradle
-
-```groovy
-compile 'com.uddernetworks.newocr:NewOCR:2.0.0-SNAPSHOT'
-```
-
-### Maven
-
-```xml
-<dependency>
-    <groupId>com.uddernetworks.newocr</groupId>
-    <artifactId>NewOCR</artifactId>
-    <version>2.0.0-SNAPSHOT</version>
-</dependency>
-```
+- [Demo Video (OLD)](https://www.youtube.com/watch?v=eyH4aXlB1Js)
+- [Feature Overview](https://wiki.ms-paint-i.de/features)
+- [Installation](https://wiki.ms-paint-i.de/installation)
+- [IDE Contribution](https://wiki.ms-paint-i.de/development)
 
