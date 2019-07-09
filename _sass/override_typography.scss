@@ -24,7 +24,7 @@ code {
   color: #fff !important;
 }
 
-p {
+p:not(.img), .main-content li {
   opacity: 0.8;
   line-height: 1.66;
 }
