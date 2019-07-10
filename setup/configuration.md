@@ -26,7 +26,7 @@ This is a fairly straightforward category with only one setting, being the editi
 
 ## Injection
 
-This category also revolves around text editing, though more specifically the button injection. This feature is described more in [text editing](/misc/textediting), but the first option determines if buttons are added to the native Paint window when a file is opened via **File > Open > File**, and the second option being if buttons should be injected when creating a new file via **File > New > Image File**.
+This category also revolves around text editing, though more specifically the button injection. This feature is described more in [text editing](/misc/textediting), but the first option determines if buttons are added to the native Paint window when a file is opened via **File > Open > File**, and the second option being if buttons should be injected when creating a new file via **File > New > Image File**. More information about injection may be found [here](/misc/textediting#button-injection).
 
 ## Languages
 
@@ -51,3 +51,9 @@ The **Download LSP** button will download the LSP server with a confirmation pop
 
 ![](/assets/images/setup/languages.png)
 {: .img }
+
+
+
+## Misc
+
+This is not in a setting page, though in the left page of the IDE, with the language-specific settings. The **Generate** button, when clicked, generates defaults for unset required settings (Some may not have a default) relative to the project location, as well as setting the themes to the default normal and extra dark if they have been removed. Lastly, it sets the training image to a location of the training relative to the project, not just **\\train.png**.

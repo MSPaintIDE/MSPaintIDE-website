@@ -29,3 +29,6 @@ In the project creation window, there is the ability to set the language, the na
 
 Projects can also be opened by the **Open Project** button, or by going to **File > Open > Project** and selecting a **.ppf** file of a project. Alternatively, a project can be opened by double clicking any file in the Windows explorer with the **.ppf** file extension, assuming the file extension was selected through the installer initially.
 
+## Project Importing
+
+Project importing is **not** yet supported. If an issue or two suggests it, the feature may be added after the 3.0.0 release.
