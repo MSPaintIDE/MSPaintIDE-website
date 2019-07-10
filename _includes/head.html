@@ -46,6 +46,7 @@
             let headers = collectTags(["h1", "h2", "h3"]);
             console.log(headers);
             headers.forEach(header => {
+                if (header.innerHTML === 'Table of contents') return;
                  header.innerHTML = `<a href="#${header.id}">${header.innerHTML}</a>`;
             });
         };
