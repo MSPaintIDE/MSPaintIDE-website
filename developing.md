@@ -2,7 +2,7 @@
 layout: default
 title: Developing
 description: Developing with the code of MS Paint IDE
-nav_order: 5
+nav_order: 6
 permalink: /developing
 github-path: developing.md
 ---

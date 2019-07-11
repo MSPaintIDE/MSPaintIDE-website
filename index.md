@@ -18,6 +18,7 @@ The following are some links to help provide more specific guidance.
 
 - [Demo Video (OLD)](https://www.youtube.com/watch?v=eyH4aXlB1Js)
 - [Feature Overview](https://wiki.ms-paint-i.de/features)
-- [Installation](https://wiki.ms-paint-i.de/installation)
+- [Assistant Setup](https://wiki.ms-paint-i.de/misc/assistant)
+- [Installation](https://wiki.ms-paint-i.de/setup/installation)
 - [IDE Contribution](https://wiki.ms-paint-i.de/development)
 

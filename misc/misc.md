@@ -2,7 +2,7 @@
 layout: default
 title: Misc
 description: Miscellaneous settings in MS Paint IDE
-nav_order: 4
+nav_order: 5
 has_children: true
 permalink: /misc/
 github-path: misc/misc.md

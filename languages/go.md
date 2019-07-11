@@ -10,7 +10,7 @@ github-path: languages/go.md
 
 # Go
 
-The Go language relies on [Google's Gopls]https://github.com/golang/go/wiki/gopls) for language implementation, and normal [Golang](https://golang.org/dl/) to run programs. The following items are the settings specific to Go:
+The Go language relies on [Google's Gopls](https://github.com/golang/go/wiki/gopls) for language implementation, and normal [Golang](https://golang.org/dl/) to run programs. The following items are the settings specific to Go:
 
 ### Input Directory
 
