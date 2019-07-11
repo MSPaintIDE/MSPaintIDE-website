@@ -22,6 +22,10 @@ a:not([class]) {
 
 code {
   color: #fff !important;
+
+  &.highlighter-rouge {
+    border: 4px solid #302d36 !important;
+  }
 }
 
 p:not(.img), .main-content li {
