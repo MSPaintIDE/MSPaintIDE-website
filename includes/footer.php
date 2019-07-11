@@ -15,10 +15,11 @@
         <div class="link-group organization">
             <span class="link-header">Organization</span>
             <a href="/about">About</a>
-            <a href="/partners">Partners</a>
-            <a href="/press">Press</a>
-            <a href="/stats">Stats</a>
+            <a href="https://wiki.ms-paint-i.de/">Wiki</a>
             <a href="/logos">Logos</a>
+            <a href="/press">Press</a>
+            <a href="/partners">Partners</a>
+            <a href="/stats">Stats</a>
         </div>
         <div class="link-group projects">
             <span class="link-header">Projects</span>

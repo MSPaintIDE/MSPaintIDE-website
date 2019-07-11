@@ -3,7 +3,7 @@
     "title": "Initial Release",
     "version": "v1.0",
     "description": "The initial release. The .zip archive contains the released jar, and all is needed to get it working is unzip the file, and configure the application's paths as shown in the screenshots.",
-    "commits": null,
+    "commits": 0,
     "additions": 0,
     "deletions": 0,
     "date_diff": "-",
@@ -180,6 +180,29 @@
         "type": "ZIP",
         "size": "323 KB",
         "url": "https:\/\/api.github.com\/repos\/MSPaintIDE\/MSPaintIDE\/zipball\/v2.1.1"
+      }
+    ]
+  },
+  {
+    "title": "Complete Overhaul",
+    "version": "v3.0.0-BETA",
+    "description": "A completely custom OCR with multiple fonts at any size supported, many different languages with LSP support, Google Assistant support, and much, much more. This is a BETA release only available on this website and things may change slightly.<br><br>Note that the line additions do not include the OCR and other projects totalling over 300 extra commits",
+    "commits": 174,
+    "additions": 32830,
+    "deletions": 19290,
+    "date_diff": 305,
+    "downloads": [
+      {
+        "title": "Installer",
+        "type": "EXE",
+        "size": "86.0 MB",
+        "url": "https:\/\/ms-paint-i.de\/beta\/MSPaintIDE-3.0.0-BETA.exe"
+      },
+      {
+        "title": "Source",
+        "type": "ZIP",
+        "size": "738 KB",
+        "url": "https:\/\/api.github.com\/repos\/MSPaintIDE\/MSPaintIDE\/zipball\/master"
       }
     ]
   }
