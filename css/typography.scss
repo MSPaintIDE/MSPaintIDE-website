@@ -7,8 +7,11 @@ h1, h2, h3, h4, h5, h6 {
   color: #FFF;
 }
 
-p, span, a {
+p, span, a, li {
   color: #FFF;
+  .content & {
+    opacity: 0.8;
+  }
 }
 
 a:hover {

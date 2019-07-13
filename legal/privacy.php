@@ -1,13 +1,13 @@
 <?php
-include_once 'includes/default-section.php';
-include_once 'includes/components.php';
+include_once '../includes/default-section.php';
+include_once '../includes/components.php';
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <?php
-    include 'includes/head.php';
+    include '../includes/head.php';
     head('MS Paint IDE - Privacy');
     ?>
     <style>
@@ -17,7 +17,7 @@ include_once 'includes/components.php';
     </style>
 </head>
 <body id="page-top">
-<?php include 'includes/navbar.php' ?>
+<?php include '../includes/navbar.php' ?>
 
 <div class="content">
     <div class="container col-xl-9 first-container">
@@ -56,6 +56,6 @@ include_once 'includes/components.php';
     </div>
 </div>
 
-<?php include 'includes/footer.php' ?>
+<?php include '../includes/footer.php' ?>
 </body>
 </html>
