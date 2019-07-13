@@ -20,5 +20,5 @@ The following are some links to help provide more specific guidance.
 - [Feature Overview](https://wiki.ms-paint-i.de/features)
 - [Assistant Setup](https://wiki.ms-paint-i.de/misc/assistant)
 - [Installation](https://wiki.ms-paint-i.de/setup/installation)
-- [IDE Contribution](https://wiki.ms-paint-i.de/development)
+- [IDE Contribution](https://wiki.ms-paint-i.de/developing)
 

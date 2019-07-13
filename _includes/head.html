@@ -1,8 +1,13 @@
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84382008-3"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
+        (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-1875272624841591",
+            enable_page_level_ads: true
+        });
 
         function gtag() {
             dataLayer.push(arguments);
@@ -43,9 +48,7 @@
 
     <script>
         window.onload = function() {
-            let headers = collectTags(["h1", "h2", "h3"]);
-            console.log(headers);
-            headers.forEach(header => {
+            collectTags(["h1", "h2", "h3"]).forEach(header => {
                 if (header.innerHTML === 'Table of contents') return;
                  header.innerHTML = `<a href="#${header.id}">${header.innerHTML}</a>`;
             });

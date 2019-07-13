@@ -58,4 +58,4 @@ If needed, the standalone program (Not installable) can be compiled to `\package
 gradle compileJar
 ```
 
-If, after this command, an installer ois requires, the Inno Setup file is located at `\package\build\resources\main\MSPaintIDE.iss`.
+If, after this command, an installer is requires, the Inno Setup file is located at `\package\build\resources\main\MSPaintIDE.iss`.
