@@ -1,3 +1,7 @@
+<?php
+include_once 'ads.php';
+createHorizontal();
+?>
 <div class="footer">
     <div class="footer-contents col-12 col-sm-12 col-md-10 col-lg-10 col-xl-8">
         <div class="left-column">

@@ -1,6 +1,7 @@
 <?php
 include_once 'includes/default-section.php';
 include_once 'includes/components.php';
+include_once 'includes/ads.php';
 ?>
 
 <!DOCTYPE html>
@@ -47,6 +48,7 @@ include_once 'includes/components.php';
         </div>
         <?php
         endSection();
+        createHorizontal();
         startSection('Features', 'features');
         ?>
 
