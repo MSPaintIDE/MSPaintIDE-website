@@ -22,6 +22,7 @@ MS Paint IDE over the past few years has amassed many features, despite having m
 - Native installer for easy usage
 - Automatic Discord RPC support
 - IDE theming via CSS files <small>[(wiki)](/misc/theming)</small>
+- Program and compiler outputs as image logs
 
 # Planned Features
 
