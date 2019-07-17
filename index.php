@@ -43,7 +43,7 @@ include_once 'includes/ads.php';
             classes, and much much more.</p>
         <div class="m-auto col-12 col-md-10 col-lg-10">
             <div class="video-container">
-                <iframe class="demo-video" src="https://www.youtube.com/embed/eyH4aXlB1Js" frameborder="0" allowfullscreen></iframe>
+                <iframe class="demo-video" src="https://www.youtube.com/embed/fhSaLx6l9Xk" frameborder="0" allowfullscreen></iframe>
             </div>
         </div>
         <?php
