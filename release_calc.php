@@ -22,6 +22,7 @@ $zip_file_sizes['v2.0.1'] = '167 KB';
 $zip_file_sizes['v2.0.2'] = '168 KB';
 $zip_file_sizes['v2.1.0'] = '174 KB';
 $zip_file_sizes['v2.1.1'] = '323 KB';
+$zip_file_sizes['v3.0.0'] = '789 KB';
 
 foreach ($json as $release) {
     $description = $release['body'];

@@ -185,24 +185,24 @@
   },
   {
     "title": "Complete Overhaul",
-    "version": "v3.0.0-BETA",
-    "description": "A completely custom OCR with multiple fonts at any size supported, many different languages with LSP support, Google Assistant support, and much, much more. This is a BETA release only available on this website and things may change slightly.<br><br>Note that the line additions do not include the OCR and other projects totalling over 300 extra commits",
-    "commits": 174,
-    "additions": 32830,
-    "deletions": 19290,
-    "date_diff": 305,
+    "version": "v3.0.0",
+    "description": "A completely custom OCR with multiple fonts at any size supported, many different languages with LSP support, Google Assistant support, arbitrary text file editing, and much, much more.<br><br>Note that the line additions do not include the OCR and other projects totalling around 450 total commits since the last release (Excluding websites)",
+    "commits": 181,
+    "additions": 33373,
+    "deletions": 19419,
+    "date_diff": 311,
     "downloads": [
       {
         "title": "Installer",
         "type": "EXE",
-        "size": "86.0 MB",
-        "url": "https:\/\/ms-paint-i.de\/beta\/MSPaintIDE-3.0.0-BETA.exe"
+        "size": "87.21 MB",
+        "url": "https:\/\/github.com\/MSPaintIDE\/MSPaintIDE\/releases\/download\/v3.0.0\/MSPaintIDE-3.0.0.exe"
       },
       {
         "title": "Source",
         "type": "ZIP",
-        "size": "738 KB",
-        "url": "https:\/\/api.github.com\/repos\/MSPaintIDE\/MSPaintIDE\/zipball\/master"
+        "size": "789 KB",
+        "url": "https:\/\/api.github.com\/repos\/MSPaintIDE\/MSPaintIDE\/zipball\/v3.0.0"
       }
     ]
   }

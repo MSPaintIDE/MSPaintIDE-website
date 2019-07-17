@@ -32,7 +32,7 @@ include_once 'includes/components.php';
                 ['1.x Updates', '12/13/17 - 12/14/17', 'Shortly after the post on SpigotMC gained in popularity, more basic  features were added. By this time, the hype died down and the IDE’s development became stagnant.'],
                 ['Git Features, UI overhaul', '4/16/2018 - 8/30/2018', 'The IDE was mentioned a few times during these months, so some more features were added. A single update to change the UI completely, and then later on some updates to add Git, increased performance, and various other things.'],
                 ['Popularity Explosion', '9/9/2018 - 9/12/2018', 'A small update with the inclusion of a demo/installation video was posted. Posted on Reddit twice by RubbaBoy on 9/10/2018, but only when it was posted a few hours later by another user on 9/11/2018 did the project gain substantial popularity. Shortly afterwards, the project was featured on several tech news websites, including Hackernews and Tweakers, and shared in many places, racking up millions of website requests.'],
-                ['Active Development', '9/12/2018 - Present', 'Since the popularity boom of the IDE, it has been in constant development. New projects have been made for the IDE, including NewOCR, PaintInjector, and PaintAssist. Many bugs have been fixed since the last release in September of 2018, and substantial features have been added.'],
+                ['Complete Overhaul', '9/12/2018 - 7/17/2019', 'New projects have been made for the IDE, including NewOCR, PaintInjector, and PaintAssist. Many bugs have been fixed since the last release in September of 2018, and substantial features have been added.'],
             ]);
             ?>
         </div>
