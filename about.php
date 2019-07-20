@@ -17,9 +17,23 @@ include_once 'includes/components.php';
 <div class="content">
     <div class="container col-xl-9 first-container">
         <?php startSection('About', 'about', 'large-section'); ?>
-        <p>MS Paint IDE strives to be not only a great and real development platform, but a set of projects meant to
+        <p>
+            MS Paint IDE strives to be not only a great and real development platform, but a set of projects meant to
             encompass many fields of research and knowledge, compared to the ‘traditional’ IDE. The IDE may seem like a
-            joke, but the research and development gone into it is most definitely not.</p>
+            joke, but the research and development gone into it is most definitely not.
+        </p>
+        <br>
+        <p>
+            MS Paint IDE uses a custom OCR that can be trained by nearly any font in any size, reading code from images in just miliseconds.
+            The IDE's compiler and program output are in .png's, and automatically underlines any errors present and provides syntax highlighting
+            with Java, Go, Python, and JavaScript currently being supported.
+        </p>
+        <p>
+            The IDE also allows for arbitrarily editing any text file through Paint via a <a href="https://wiki.ms-paint-i.de/misc/textediting">context menu option</a>, with native-looking button overlays onto MS Paint to perform IDE actions.
+        </p>
+        <p>
+            More info and screenshots of everything are available through <a href="https://wiki.ms-paint-i.de/">the wiki</a>.
+        </p>
         <?php
         endSection();
         startSection('History', 'history');

@@ -27,7 +27,10 @@ include_once 'includes/components.php';
                 ['Hackaday', '9/13/18', '/images/press/logos/hackaday.png', 'https://hackaday.com/2018/09/13/a-whole-other-kind-of-graphical-programming/'],
                 ['Tproger', '9/18/18', '/images/press/logos/tproger.png', 'https://tproger.ru/devnull/ms-paint-ide/'],
                 ['Tweakers', '12/9/18', '/images/press/logos/tweakers.png', 'https://tweakers.net/geek/143297/programmeur-maakt-ide-met-ms-paint.html'],
-                ['zhihu', '12/13/18', '/images/press/logos/zhihu.png', 'https://zhuanlan.zhihu.com/p/46289189']
+                ['zhihu', '12/13/18', '/images/press/logos/zhihu.png', 'https://zhuanlan.zhihu.com/p/46289189'],
+                ['Tproger', '7/18/19', '/images/press/logos/tproger.png', 'https://tproger.ru/news/ms-paint-ide-3-0/'],
+                ['Jaxenter', '7/18/19', '/images/press/logos/jaxenter.png', 'https://jaxenter.com/mspaint-ide-160179.html'],
+                ['Entwickler', '7/19/19', '/images/press/logos/entwickler.png', 'https://entwickler.de/online/development/ms-paint-ide-579901370.html']
             ]);
             ?>
         </div>
