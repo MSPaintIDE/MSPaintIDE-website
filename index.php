@@ -76,7 +76,7 @@ include_once 'includes/ads.php';
                 ['Partially Native', 'The main IDE comes with your Windows computer, so you don\'t need to worry about potential viruses with your brand new computer.', '#'],
                 ['Popular', 'Chances are, you probably know about MS Paint, or at least have heard of it. This makes adapting to it easier than most programs.', '#'],
                 ['Oldest', 'MS Paint IDE\'s core program, MS Paint, is older than almost every modern IDE, also making it easily recognisable and bug-resistant.', '#'],
-                ['Code Sharing', 'Code sharing is easy, as your code is just an image. Reduce overhead by ditchnig your screenshot program, when you can just copy and paste.', '#'],
+                ['Code Sharing', 'Code sharing is easy, as your code is just an image. Reduce overhead by ditching your screenshot program, when you can just copy and paste.', '#'],
                 ['Open Source', 'If you wanted to help with the IDE, there are many different areas to work on, including the IDE, the OCR, several wikis, docs, and 2 websites.', '#'],
                 ['Superiority', 'It\'s not Eclipse.', '#']
             ]);
