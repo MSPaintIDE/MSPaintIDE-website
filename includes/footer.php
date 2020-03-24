@@ -8,7 +8,7 @@ createHorizontal();
             <img class="footer-logo" src="/images/logos/ms-paint-logo-colored.png" alt="Logo">
             <div class="footer-text">
                 <span class="big-name">MS Paint IDE</span>
-                <span class="copyright">© 2019 Adam Yarris</span>
+                <span class="copyright">© 2020 Adam Yarris</span>
                 <ul class="social-links">
                     <li><a href="https://www.youtube.com/channel/UC2K3flYNj0hLC2BfPCXfvEA"></a></li>
                     <li><a href="https://github.com/MSPaintIDE"></a></li>
